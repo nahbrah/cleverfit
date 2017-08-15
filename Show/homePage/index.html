@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+ <html>
+ <title>CleverFit</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<body>
+	<div class "w3-top">
+		<div class="w3-nav w3-teal w3-xlarge " id="mainnav">
+			<a href="#home" class="w3-bar-item w3-button w3-mobile">Home</a>
+			<a href="#jobs" class="w3-bar-item w3-button w3-mobile">Following</a>
+			<a href="#about" class="w3-bar-item w3-button w3-mobile">About</a>
+			<a href="#profile" class="w3-bar-item w3-button w3-mobile">My Profile</a>
+			<i button onclick="hideshowsearchbar()" class="material-icons w3-bar-item w3-button w3-mobile  w3-right w3-xxlarge w3-margin-left"  style="height: 100%">search</i>
+				<p class= " w3-small w3-bar-item w3-mobile ayla-fadeOut w3-right"  id = "searchbar" style="width:100%;max-width:400px;max-height:200px" > <input class="w3-input" type="text"></p>
+				
+				<script>
+function hideshowsearchbar() {
+    var x = document.getElementById("searchbar");
+    if (x.className.indexOf("w3-show ayla-fadeIn") == -1) {
+        x.className += " w3-show ayla-fadeIn";
+    } else {
+        x.className = x.className.replace(" w3-show ayla-fadeIn", "");
+
+	
+	}
+}
+
+</script>
+		</div>
+	</div>
+	
+	<div class="w3-display-container">
+		<img src="office1.jpg" alt="Office" class="w3-opacity w3-grayscale-min" style="width:100%">
+		<div class="w3-display-middle w3-center w3-large">
+			<div class="w3-panel w3-round-xlarge w3-teal">
+				<h1><i class="material-icons">lightbulb_outline</i>
+					Clever Fit
+				</h1>
+			</div>
+			<div class="w3-panel ">
+				<input class="w3-input w3-border w3-round w3-col s11 m11 l11 w3-round-xlarge" type="text" placeholder="Search Jobs...">
+				<i class="material-icons w3-cell w3-col m1 s1 l1 w3-bar-item w3-button w3-mobile w3-right w3-teal w3-round-xlarge">search</i>
+				<div class="w3-dropdown-hover w3-col m4 s4 l4">
+				  <button class="w3-button w3-round-xlarge">Distance</button>
+				  <div class="w3-dropdown-content w3-bar-block w3-border ">
+					<a href="#" class="w3-bar-item w3-button">Within 5 Miles</a>
+					<a href="#" class="w3-bar-item w3-button">Between 5-20 Miles</a>
+					<a href="#" class="w3-bar-item w3-button">Greater than 20 Miles</a>
+				  </div>
+				</div> 
+				<div class="w3-dropdown-hover w3-col m4 s4 l4">
+				  <button class="w3-button w3-round-xlarge">Location</button>
+				  <div class="w3-dropdown-content w3-bar-block w3-border">
+					<a href="#" class="w3-bar-item w3-button">Local City</a>
+					<a href="#" class="w3-bar-item w3-button">Add New City</a>
+				  </div>
+				</div> 
+				<div class="w3-dropdown-hover w3-col m4 s4 l4">
+				  <button class="w3-button w3-round-xlarge">Job Type</button>
+				  <div class="w3-dropdown-content w3-bar-block w3-border">
+					<a href="#" class="w3-bar-item w3-button">Job Type 1</a>
+					<a href="#" class="w3-bar-item w3-button">Job Type 2</a>
+					<a href="#" class="w3-bar-item w3-button">Job Type 3</a>
+				  </div>
+				</div> 
+				
+			</div>
+			<div class="w3-panel w3-half">
+				<button class="w3-button w3-light-grey w3-round-xlarge">Candidate Log-In</button>
+			</div>
+			<div class="w3-panel w3-half">
+				<button class="w3-button w3-teal w3-round-xlarge">Employer Log-In</button>
+			</div>
+		</div>
+	</div>
+	
+	<div class="w3-container w3-grey">
+		<div class="w3-panel">
+			<img src="happy1.jpg" alt="Happy Person" class="w3-circle w3-padding w3-right w3-col m3 l3" style="">
+			<h2>What we do...</h2> 
+			<p>Lorem ipsum dolor sit amet, at tantas cetero invidunt quo. Ea quo semper disputando, ea mea amet quando, ut nam prima moderatius voluptatibus. Eos etiam prompta ponderum ut, duo ut facer nihil. Ea vero laudem prompta quo.</p>
+			<p>Audire democritum id mei. Ei omnium iuvaret placerat vis, vel dicit vivendo ea. Has postulant comprehensam ad, vide voluptua persequeris cu mea, mei vidisse platonem molestiae ut. Liber clita ponderum et nec, ea eros veniam appellantur vix, detracto noluisse torquatos his ne. Tation delicata posidonium et usu.</p>
+			<p>Laoreet nominati democritum an eos. Cu omnis tibique gubergren his, latine pertinax inimicus at mei, ius eu legere intellegat. Est ex omnis modus eleifend. Clita labore torquatos his ne.</p>
+		</div>
+		<div class="w3-panel">
+			<img src="happy2.jpg" alt="Table with office supplies" class="w3-circle w3-padding w3-left w3-col m3 l3" style="">
+			<h2>What we can do for you...</h2> 
+			<p>Lorem ipsum dolor sit amet, at tantas cetero invidunt quo. Ea quo semper disputando, ea mea amet quando, ut nam prima moderatius voluptatibus. Eos etiam prompta ponderum ut, duo ut facer nihil. Ea vero laudem prompta quo.</p>
+			<p>Audire democritum id mei. Ei omnium iuvaret placerat vis, vel dicit vivendo ea. Has postulant comprehensam ad, vide voluptua persequeris cu mea, mei vidisse platonem molestiae ut. Liber clita ponderum et nec, ea eros veniam appellantur vix, detracto noluisse torquatos his ne. Tation delicata posidonium et usu.</p>
+			<p>Laoreet nominati democritum an eos. Cu omnis tibique gubergren his, latine pertinax inimicus at mei, ius eu legere intellegat. Est ex omnis modus eleifend. Clita labore torquatos his ne.</p>
+		</div>
+	</div>
+	
+</body>

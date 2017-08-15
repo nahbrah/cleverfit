@@ -1,0 +1,979 @@
+ <!DOCTYPE html>
+ <html>
+ <title>CleverFit</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<body>
+	<div class="w3-container w3-teal">
+		<h1><i class="material-icons">lightbulb_outline</i>
+			Clever Fit
+		</h1>
+	</div>
+	<div class "w3-top">
+		<div class="w3-nav w3-teal w3-large" id="mainnav">
+			<a href="#home" class="w3-bar-item w3-button w3-mobile">Home</a>
+			<a href="#jobs" class="w3-bar-item w3-button w3-mobile">Following</a>
+			<a href="#about" class="w3-bar-item w3-button w3-mobile">About</a>
+			<a href="#profile" class="w3-bar-item w3-button w3-mobile">My Profile</a>
+			<i class="material-icons w3-bar-item w3-button w3-mobile w3-right">search</i>
+		</div>
+	</div>
+	<div class "w3-main">
+		<div id="header" class="w3-panel w3-margin-bottom">
+			<div class="w3-container w3-white w3-col s5 m5 l5">
+				<div class="w3-panel w3-white">
+					<img src="tgg-logo.jpg" alt="Trak Global Group" style="width:100%">
+				</div>
+			</div>
+			<div class="w3-padding-32 w3-padding-large w3-col s1 m1 l1">
+				<button class="w3-button w3-light-grey w3-round-xlarge">Follow</button>
+			</div>
+			<div class="w3-container w3-half">
+				<div class="w3-border-left">
+					<div class="w3-container w3-border-left">
+						<div class="w3-half">
+							<h4><b>Don't miss out on the perfect job!</b></h4>
+							<p>Sign up today and take our tested survey</p>
+							<div class="w3-panel">
+								<button class="w3-button w3-light-grey w3-round-xlarge">Sign-Up</button>
+								<button class="w3-button w3-light-grey w3-round-xlarge">Take Survey</button>
+							</div>
+						</div>
+						<div class="w3-half">
+							<img src="desk.png" alt="" class="w3-half w3-round-xxlarge" style="width:100%; max-height:145px">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div  class="w3-panel"> 
+			<div class="w3-row" style="">
+				<a href="javascript:void(0)" onclick="openTab(event, 'jobs');">
+					<div class="w3-col l2 m2 tablink w3-bottombar w3-hover-light-grey w3-padding">View Jobs</div>
+				</a>
+				<a href="javascript:void(0)" onclick="openTab(event, 'overview');">
+					<div class="w3-col l2 m2 tablink w3-bottombar w3-hover-light-grey w3-padding w3-border-black">Overview</div>
+				</a>
+				<a href="javascript:void(0)" onclick="openTab(event, 'coreValues');">
+					<div class="w3-col l2 m2 tablink w3-bottombar w3-hover-light-grey w3-padding">Core Values</div>
+				</a>
+				<a href="javascript:void(0)" onclick="openTab(event, 'office');">
+					<div class="w3-col l2 m2 tablink w3-bottombar w3-hover-light-grey w3-padding">Office</div>
+				</a>
+				<a href="javascript:void(0)" onclick="openTab(event, 'departments');">
+					<div class="w3-col l4 m4 tablink w3-bottombar w3-hover-light-grey w3-padding">More Information</div>
+				</a>
+			</div>
+		</div>
+		
+		<div id="jobs" class="w3-panel option" style="display:none">
+			<div class="w3-panel w3-cell-row">
+				
+				<div id="mySidebar" class="w3-container w3-cell w3-bar-block w3-card-2 w3-animate-left" style="display:none">
+				    <a href="#" class="w3-bar-item w3-button">Match</a>
+				    <a href="#" class="w3-bar-item w3-button">Travel Time</a>
+				    <a href="#" class="w3-bar-item w3-button">Pay</a>
+					<a href="#" class="w3-bar-item w3-button">Location</a>
+					<a href="#" class="w3-bar-item w3-button">Benifits</a>
+				</div>
+				
+				<div id="jobList" class="w3-cell w3-container">
+					<div class="w3-bar w3-teal w3-cell-row">
+						<button class="w3-button w3-teal w3-xlarge w3-cell" onclick="jobs_open()">&#9776;</button>
+						<i class="material-icons w3-button w3-cell w3-right w3-padding-large">search</i>
+						<div class="w3-right w3-padding-small w3-cell">
+							<input class="w3-input w3-border w3-round-xlarge" type="text" placeholder="Search...">
+						</div>
+					</div>
+					
+					<ul class="w3-ul w3-card-4 w3-cell">
+						<li class="w3-container">
+							<div class="w3-container w3-col m8 l8">
+								<div class="w3-panel">
+									<div class="w3-container w3-col m9 l9">
+										<span class="w3-large">Job 1</span><br>
+										<span>Department/Section;</span>
+										<span class="w3-center">Match:82%*</span>
+									</div>
+									<div class="w3-container w3-col m3 l3">
+										<img src="officeSlice1.jpg" class="w3-right w3-round-large w3-margin-right" style="height:50px">
+									</div>
+								</div>
+								<ul class="a"> 
+									<li>Pay: £X p.w.</li>
+									<li>Benifits: X, Y, and Z</li>
+									<li>Place, Street, Town, AB1 2DC</li>
+								</ul>
+							</div>
+							<div class="w3-container w3-col m4 l4">
+								<p> Brief Description Of Job goes here. Lorem ipsum dolor sit amet, id has impedit erroribus constituto, mei omnis bonorum phaedrum no.</p>
+								<p>Lorem ipsum dolor sit amet, id has impedit erroribus constituto, mei omnis bonorum phaedrum no.</p>
+								<div class="w3-panel w3-left">
+									<button class="w3-btn w3-left w3-round-xlarge w3-teal w3-hover-grey">Apply</button>
+								</div>
+								<div class="w3-panel w3-left">
+									<button class="w3-btn w3-left w3-round-xlarge w3-teal w3-hover-grey">Interested</button>
+								</div>
+							</div>
+						</li>
+						<li class="w3-container">
+							<div class="w3-container w3-col m8 l8">
+								<div class="w3-panel">
+									<div class="w3-container w3-col m9 l9">
+										<span class="w3-large">Job 2</span><br>
+										<span>Department/Section;</span>
+										<span class="w3-center">Match:78%*</span>
+									</div>
+									<div class="w3-container w3-col m3 l3">
+										<img src="officeSlice2.jpg" class="w3-right w3-round-large w3-margin-right" style="height:50px">
+									</div>
+								</div>
+								<ul class="a"> 
+									<li>Pay: £X p.w.</li>
+									<li>Benifits: X, Y, and Z</li>
+									<li>Place, Street, Town, AB1 2DC</li>
+								</ul>
+							</div>
+							<div class="w3-container w3-col m4 l4">
+								<p> Brief Description Of Job goes here. Lorem ipsum dolor sit amet, id has impedit erroribus constituto, mei omnis bonorum phaedrum no.</p>
+								<p>Lorem ipsum dolor sit amet, id has impedit erroribus constituto, mei omnis bonorum phaedrum no.</p>
+								<div class="w3-panel w3-left">
+									<button class="w3-btn w3-left w3-round-xlarge w3-teal w3-hover-grey">Apply</button>
+								</div>
+								<div class="w3-panel w3-left">
+									<button class="w3-btn w3-left w3-round-xlarge w3-teal w3-hover-grey">Interested</button>
+								</div>
+							</div>
+						</li>
+						<li class="w3-container">
+							<div class="w3-container w3-col m8 l8">
+								<div class="w3-panel">
+									<div class="w3-container w3-col m9 l9">
+										<span class="w3-large">Job 3</span><br>
+										<span>Department/Section;</span>
+										<span class="w3-center">Match:70%*</span>
+									</div>
+									<div class="w3-container w3-col m3 l3">
+										<img src="officeSlice3.jpg" class="w3-right w3-round-large w3-margin-right" style="height:50px">
+									</div>
+								</div>
+								<ul class="a"> 
+									<li>Pay: £X p.w.</li>
+									<li>Benifits: X, Y, and Z</li>
+									<li>Place, Street, Town, AB1 2DC</li>
+								</ul>
+							</div>
+							<div class="w3-container w3-col m4 l4">
+								<p> Brief Description Of Job goes here. Lorem ipsum dolor sit amet, id has impedit erroribus constituto, mei omnis bonorum phaedrum no.</p>
+								<p>Lorem ipsum dolor sit amet, id has impedit erroribus constituto, mei omnis bonorum phaedrum no.</p>
+								<div class="w3-panel w3-left">
+									<button class="w3-btn w3-left w3-round-xlarge w3-teal w3-hover-grey">Apply</button>
+								</div>
+								<div class="w3-panel w3-left">
+									<button class="w3-btn w3-left w3-round-xlarge w3-teal w3-hover-grey">Interested</button>
+								</div>
+							</div>
+						</li>
+						<li class="w3-container">
+							<div class="w3-container w3-col m8 l8">
+								<div class="w3-panel">
+									<div class="w3-container w3-col m9 l9">
+										<span class="w3-large">Job 4</span><br>
+										<span>Department/Section;</span>
+										<span class="w3-center">Match:63%*</span>
+									</div>
+									<div class="w3-container w3-col m3 l3">
+										<img src="officeSlice4.jpg" class="w3-right w3-round-xlarge w3-margin-right" style="height:50px">
+									</div>
+								</div>
+								<ul class="a"> 
+									<li>Pay: £X p.w.</li>
+									<li>Benifits: X, Y, and Z</li>
+									<li>Place, Street, Town, AB1 2DC</li>
+								</ul>
+							</div>
+							<div class="w3-container w3-col m4 l4">
+								<p> Brief Description Of Job goes here. Lorem ipsum dolor sit amet, id has impedit erroribus constituto, mei omnis bonorum phaedrum no.</p>
+								<p>Lorem ipsum dolor sit amet, id has impedit erroribus constituto, mei omnis bonorum phaedrum no.</p>
+								<div class="w3-panel w3-left">
+									<button class="w3-btn w3-left w3-round-xlarge w3-teal w3-hover-grey">Apply</button>
+								</div>
+								<div class="w3-panel w3-left">
+									<button class="w3-btn w3-left w3-round-xlarge w3-teal w3-hover-grey">Interested</button>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<script>
+					function jobs_open() {
+						if (document.getElementById("jobList").style.width=="100%") {
+							document.getElementById("jobList").style.marginLeft="20%";
+							document.getElementById("jobList").style.width="80%";
+							document.getElementById("mySidebar").style.width = "100%";
+							document.getElementById("mySidebar").style.display = "block";
+						}
+						else {
+							document.getElementById("jobList").style.width="100%";
+							document.getElementById("jobList").style.marginLeft="0%";
+							document.getElementById("mySidebar").style.display = "none";
+						}
+					}
+				</script>
+			</div>
+		</div>
+		
+		<div id="overview" class="w3-panel w3-leftbar w3-rightbar w3-cell-row option">
+			<div class="w3-cell w3-container w3-col m9 l9">
+				<div class="w3-panel w3-teal w3-round-large">
+					<p class="w3-xxlarge w3-serif">
+					<i>"Main Quote About Vision."</i></p>
+					<p>Jane Doe, CEO.</p>
+				</div>
+				<div class="w3-container w3-cell-row w3-white">
+					<div class="w3-panel w3-col m6 l6 w3-cell">
+						<div class="w3-panel w3-half">
+							<img src="companyOffice.jpg" class="w3-circle" width="100%">
+						</div>
+						<h4>Company Brief</h4>
+						<p>Lorem ipsum dolor sit amet, id has impedit erroribus constituto, mei omnis bonorum phaedrum no. Sit graece aperiam aliquam ei, cu vis dicta mollis. Sed alterum corpora at, ne eius copiosae quo. Cu qui omnis saepe, ad cum mazim congue. At dicam tollit audiam vel, his id consul oblique adversarium. Qualisque appellantur per eu.</p>
+						<p>Posidonium intellegam sed ne. Nominavi dignissim mea ea. Ne justo putent appareat pri, eam eu numquam sanctus, vim libris quidam no. Tacimates neglegentur ut pri. Malorum praesent eos.</p>
+					</div>
+					<div class="w3-panel w3-col m6 l6 w3-cell w3-leftbar">
+						<div class="w3-container w3-bottombar">
+							<div class="w3-panel w3-half w3-cell">
+								<img src="culture.png" class="w3-circle w3-center" width="100%">
+							</div>
+							<div class="w3-panel w3-cell">
+								<h4>Company Culture</h4>
+								<p><i>Lorem ipsum dolor sit amet, eum ei vitae epicuri deseruisse. An mei reque falli, omnesque suscipit efficiendi et eam, sit doming vulputate ea. Vix corpora sensibus at, an detracto iracundia mei.</i></p>
+							</div>
+						</div>
+						<div class="w3-container">
+							<div class="w3-panel w3-cell w3-col m3 l3">
+								<img src="tick.png" class="w3-circle w3-center" width="100%">
+							</div>
+							<table class="w3-table w3-col m9 l9">
+								<tr>
+									  <td>Department 1</td>
+									  <td>75%</td>
+								</tr>
+								<tr>
+									  <td>Department 2</td>
+									  <td>70%</td>
+								</tr>
+								<tr>
+									  <td>Department 3</td>
+									  <td>69%</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="w3-cell w3-card w3-col m3 l3">
+				<img src="departmentHead1.jpg" alt="Department Head Photo" width="100%">
+				<div class="w3-container w3-center w3-teal">
+					<h3>Jane Doe</h3>
+					<h4>CEO Of Company</h4>
+					<p>Telephone: 016973 12345</p>
+					<p>Email: janedoe@company.com</p>
+					<div class="w3-panel w3-cell-row">
+						<div class="w3-half">
+							<button class="w3-button w3-light-grey">LinkedIn</button>
+						</div>
+						<div class="w3-half">
+							<button class="w3-button w3-light-grey">Website</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> 
+		
+		<div id ="coreValues" class="w3-panel w3-white w3-col option" style="display:none">
+			<div id="coreVal1" class="w3-panel w3-round-large w3-grey coreVal" style="display:none">
+				<div class="w3-panel w3-col m3 l3">
+					<img src="benifit1.jpg" class="w3-circle" alt="" style="width:100%">
+				</div>
+				<div class="w3-panel w3-col m9 l9">
+					<h2>Being First</h2>
+					<p>
+					We are a business that lives in the moment. Our greatest capacity is being agile, flexible, adaptive, and innovative. 
+					</p><p>
+					We embrace the fast-changing environment we live in and turn it to our advantage by constantly changing, improving, and scanning for new opportunities.
+					</p><p>
+					The past is irrelevant; we are taking the best out of the present and expect it from our employees as well. Whenever there is an opportunity we take it and we are always ahead of the competition.
+					</p>
+				</div>
+			</div>
+			<div id="coreVal2" class="w3-panel w3-round-large w3-grey coreVal" style="display:none">
+				<div class="w3-panel w3-col m3 l3">
+					<img src="benifit2.jpg" class="w3-circle" alt="" style="width:100%">
+				</div>
+				<div class="w3-panel w3-col m9 l9">
+					<h2>Task-accomplishment driven.</h2>
+					<p>
+					When it comes to work Trak Global Group employees are 100% focused on the objective. We will do anything to deliver what was promised. 
+					</p><p>
+					The client is always right and we will go above and beyond to deliver promised outcomes, no matter the cost. 
+					</p><p>
+					Employees at Trak Global Group are objective-motivated and individualistic. Although, we will always find time to help out anyone as long as you ask for it!
+					</p>
+				</div>
+			</div>
+			<div id="coreVal3" class="w3-panel w3-round-large w3-grey coreVal" style="display:none">
+				<div class="w3-panel w3-col m3 l3">
+					<img src="benifit5.jpg" class="w3-circle" alt="" style="width:100%">
+				</div>
+				<div class="w3-panel w3-col m9 l9">
+					<h2>Ownership</h2>
+					<p>
+					Ownership has many dimensions and at Trak Global Group it is taken seriously at every level. We believe that people have the capacity to achieve great things when they have the freedom to create their own objectives and take responsibility for them. 
+					</p><p>
+					The greatest motivation for our employees comes from increased responsibility and ability to be the part of Trak Global Group development.
+					</p><p>
+					At Trak Global Group when you spot a problem you solve it; we do not waste time debating. Being proactive is a key quality of our employees.
+					</p>
+				</div>
+			</div>
+			<div id="coreVal4" class="w3-panel w3-round-large w3-grey coreVal" style="display:none">
+				<div class="w3-panel w3-col m3 l3">
+					<img src="benifit4.jpg" class="w3-circle" alt="" style="width:100%">
+				</div>
+				<div class="w3-panel w3-col m9 l9">
+					<h2>Learning comes from doing and respect comes from success.</h2>
+					<p>
+					At Trak Global Group we nurture talent by fostering taking-initiative and rewarding loyalty.
+					</p><p>
+					We seek and listen to the opinion of more experienced, successful peers because we value their knowledge. 
+					</p><p>
+					Leaders at our company take risks and make sacrifices because they know that progress comes only from trying.
+					</p>
+				</div>
+			</div>
+			<div class="w3-panel w3-white w3-hover-opacity w3-quarter" onclick="openCV('coreVal1');">
+				<div class="w3-card-4 w3-teal">
+					<header class="w3-container">
+						<h1>Being First</h1>
+					</header>
+					<img src="benifit1.jpg" alt="" style="width:100%">
+					<footer class="w3-container w3-center">
+						<h5>Info</h5>
+					</footer>
+				</div>
+			</div>
+			<div class="w3-panel w3-white w3-hover-opacity w3-quarter" onclick="openCV('coreVal2');">
+				<div class="w3-card-4 w3-light-grey">
+					<header class="w3-container">
+						<h3>Task-accomplishment Driven</h3>
+					</header>
+					<img src="benifit2.jpg" alt="" style="width:100%">
+					<footer class="w3-container w3-center">
+						<h5>Info</h5>
+					</footer>
+				</div>
+			</div>
+			<div class="w3-panel w3-white w3-hover-opacity w3-quarter" onclick="openCV('coreVal3');">
+				<div class="w3-card-4 w3-grey">
+					<header class="w3-container">
+						<h1>Ownership</h1>
+					</header>
+					<img src="benifit5.jpg" alt="" style="width:100%">
+					<footer class="w3-container w3-center">
+						<h5>Info</h5>
+					</footer>
+				</div>
+			</div>
+			<div class="w3-panel w3-white w3-hover-opacity w3-quarter" onclick="openCV('coreVal4');">
+				<div class="w3-card-4 w3-teal">
+					<header class="w3-container">
+						<h4>Learning From Doing, Respect From Success</h4>
+					</header>
+						<img src="benifit4.jpg" alt="" style="width:100%">
+					<footer class="w3-container w3-center">
+						<h5>Info</h5>
+					</footer>
+				</div>
+			</div>
+			<div class="w3-bar w3-col s12 m12 l12">
+				<a href="#" class="w3-button w3-border-right w3-disabled">&#10094;</a>
+				<a href="#" class="w3-button w3-border-left w3-right w3-disabled">&#10095;</a>
+			</div>
+			<script>
+				function openCV(CVName) {
+					var i;
+					var x = document.getElementsByClassName("coreVal");
+					for (i = 0; i < x.length; i++) {
+						x[i].style.display = "none";
+					}
+					document.getElementById(CVName).style.display = "block";
+				}
+			</script>
+		</div>
+		
+		<div id="office" class="w3-panel w3-cell-row w3-white option" style="display:none">
+			<div id="officePic1" class="w3-cell w3-col m3 l3 offPic">
+				<img src="office1.jpeg" alt="" style="width:100%">
+			</div>
+			<div id="officePic2" class="w3-cell w3-col m3 l3 offPic" style="display:none">
+				<img src="office2.jpg" alt="" style="width:100%">
+			</div>
+			<div id="officePic3" class="w3-cell w3-col m3 l3 offPic" style="display:none">
+				<img src="office3.jpg" alt="" style="width:100%">
+			</div>
+			<div id="officePic4" class="w3-cell w3-col m3 l3 offPic" style="display:none">
+				<img src="office4.jpg" alt="" style="width:100%">
+			</div>
+			<ul class="w3-ul w3-card-4 w3-cell w3-col m9 l9">
+				<li class="w3-padding-16 w3-hover-light-grey officeLink w3-teal" onclick="openOffice(event, 'office1', 'officePic1');">
+					<button class="w3-btn w3-right w3-round-xlarge w3-light-grey w3-hover-grey">View Jobs</button>
+					<img src="office1.jpeg" class="w3-left w3-circle w3-margin-right" style="width:50px">
+					<span class="w3-large">Office 1</span><br>
+					<span>Department/Section</span>
+				</li>
+				<li class="w3-padding-16 w3-hover-light-grey officeLink" onclick="openOffice(event, 'office2', 'officePic2');">
+					<button class="w3-btn w3-right w3-round-xlarge w3-light-grey w3-hover-grey">View Jobs</button>
+					<img src="office2.jpg" class="w3-left w3-circle w3-margin-right" style="width:50px">
+					<span class="w3-large">Office 2</span><br>
+					<span>Department/Section</span>
+				</li>
+				<li class="w3-padding-16 w3-hover-light-grey officeLink" onclick="openOffice(event, 'office3', 'officePic3');">
+					<button class="w3-btn w3-right w3-round-xlarge w3-light-grey w3-hover-grey">View Jobs</button>
+					<img src="office3.jpg" class="w3-left w3-circle w3-margin-right" style="width:50px">
+					<span class="w3-large">Office 3</span><br>
+					<span>Department/Section</span>
+				</li>
+				<li class="w3-padding-16 w3-hover-light-grey officeLink" onclick="openOffice(event, 'office4', 'officePic4');">
+					<button class="w3-btn w3-right w3-round-xlarge w3-light-grey w3-hover-grey">View Jobs</button>
+					<img src="office4.jpg" class="w3-left w3-circle w3-margin-right" style="height:50px;">
+					<span class="w3-large">Office 4</span><br>
+					<span>Department/Section</span>
+				</li>
+			</ul>
+			<div class="w3-container">
+				<div id="office1" class="w3-panel officeInfo">
+					<div class="w3-card-4 w3-margin-bottom w3-col m3 l3 w3-cell">
+						<script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script><div style='overflow:hidden;height:462px;width:356px;'><div id='gmap_canvas' style='height:462px;width:356px;'></div><div><small><a href="http://embedgooglemaps.com">Click here to generate your map!</a></small></div><div><small><a href="http://www.masoun-loubnan.org/">offers & coupons</a></small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><script type='text/javascript'>function init_map(){var myOptions = {zoom:10,center:new google.maps.LatLng(51.67074275694143,0.23836105123802742),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(51.67074275694143,0.23836105123802742)});infowindow = new google.maps.InfoWindow({content:'<strong>Title</strong><br>London, United Kingdom<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
+						<div class="w3-container w3-center w3-teal">
+							<h3>Office 1</h3>
+							<h4>Development</h4>
+							<p>Telephone: 016973 12345</p>
+							<p>Fax: 00348294</p>
+						</div>
+					</div>
+					<div class="w3-panel w3-col m9 l9">
+						<div class="w3-panel w3-grey">
+							<p>Lorem ipsum dolor sit amet, id has impedit erroribus constituto, mei omnis bonorum phaedrum no. Sit graece aperiam aliquam ei, cu vis dicta mollis. Sed alterum corpora at, ne eius copiosae quo. Cu qui omnis saepe, ad cum mazim congue. At dicam tollit audiam vel, his id consul oblique adversarium. Qualisque appellantur per eu.</p>
+							<p>Posidonium intellegam sed ne. Nominavi dignissim mea ea. Ne justo putent appareat pri, eam eu numquam sanctus, vim libris quidam no. Tacimates neglegentur ut pri. Malorum praesent eos ut.</p>
+						</div>
+						<div class="w3-container w3-col m3 l3">
+							<div class="w3-panel">
+								<img src="location1.jpg" class="w3-circle" alt="" style="width:100%">
+								<h4 class="w3-center">Benifit 1<h4>
+								<div class="w3-panel w3-center">
+									<p>Information about benifit will go here.</p>
+								</div>
+							</div>
+						</div>
+						<div class="w3-container w3-col m3 l3">
+							<div class="w3-panel">
+								<img src="location2.jpg" class="w3-circle" alt="" style="width:100%">
+								<h4 class="w3-center">Benifit 2<h4>
+								<div class="w3-panel w3-center">
+									<p>Information about benifit will go here.</p>
+								</div>
+							</div>
+						</div>
+						<div class="w3-container w3-col m3 l3">
+							<div class="w3-panel">
+								<img src="location3.jpg" class="w3-circle" alt="" style="width:100%">
+								<h4 class="w3-center">Benifit 3<h4>
+								<div class="w3-panel w3-center">
+									<p>Information about benifit will go here.</p>
+								</div>
+							</div>
+						</div>
+						<div class="w3-container w3-col m3 l3">
+							<div class="w3-panel">
+								<img src="location4.jpg" class="w3-circle" alt="" style="width:100%">
+								<h4 class="w3-center">Benifit 4<h4>
+								<div class="w3-panel w3-center">
+									<p>Information about benifit will go here.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div id="office2" class="w3-panel officeInfo"  style="display:none">
+					<div class="w3-card-4 w3-margin-bottom w3-col m3 l3 w3-cell">
+						<script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script><div style='overflow:hidden;height:356px;width:462px;'><div id='gmap_canvas' style='height:356px;width:462px;'></div><div><small><a href="http://embedgooglemaps.com">Click here to generate your map!</a></small></div><div><small><a href="http://www.masoun-loubnan.org/">shop online using discounts</a></small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><script type='text/javascript'>function init_map(){var myOptions = {zoom:10,center:new google.maps.LatLng(53.4807593,-2.2426305000000184),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(53.4807593,-2.2426305000000184)});infowindow = new google.maps.InfoWindow({content:'<strong>Title</strong><br>Manchester, United Kingdom<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
+						<div class="w3-container w3-center w3-teal">
+							<h3>Office 2</h3>
+							<h4>Development</h4>
+							<p>Telephone: 016973 12345</p>
+							<p>Fax: 00348294</p>
+						</div>
+					</div>
+					<div class="w3-panel w3-col m9 l9">
+						<div class="w3-panel w3-grey">
+							<p>Lorem ipsum dolor sit amet, id has impedit erroribus constituto, mei omnis bonorum phaedrum no. Sit graece aperiam aliquam ei, cu vis dicta mollis. Sed alterum corpora at, ne eius copiosae quo. Cu qui omnis saepe, ad cum mazim congue. At dicam tollit audiam vel, his id consul oblique adversarium. Qualisque appellantur per eu.</p>
+							<p>Posidonium intellegam sed ne. Nominavi dignissim mea ea. Ne justo putent appareat pri, eam eu numquam sanctus, vim libris quidam no. Tacimates neglegentur ut pri. Malorum praesent eos ut.</p>
+						</div>
+						<div class="w3-container w3-col m3 l3">
+							<div class="w3-panel">
+								<img src="location1.jpg" class="w3-circle" alt="" style="width:100%">
+								<h4 class="w3-center">Benifit 1<h4>
+								<div class="w3-panel w3-center">
+									<p>Information about benifit will go here.</p>
+								</div>
+							</div>
+						</div>
+						<div class="w3-container w3-col m3 l3">
+							<div class="w3-panel">
+								<img src="location2.jpg" class="w3-circle" alt="" style="width:100%">
+								<h4 class="w3-center">Benifit 2<h4>
+								<div class="w3-panel w3-center">
+									<p>Information about benifit will go here.</p>
+								</div>
+							</div>
+						</div>
+						<div class="w3-container w3-col m3 l3">
+							<div class="w3-panel">
+								<img src="location3.jpg" class="w3-circle" alt="" style="width:100%">
+								<h4 class="w3-center">Benifit 3<h4>
+								<div class="w3-panel w3-center">
+									<p>Information about benifit will go here.</p>
+								</div>
+							</div>
+						</div>
+						<div class="w3-container w3-col m3 l3">
+							<div class="w3-panel">
+								<img src="location4.jpg" class="w3-circle" alt="" style="width:100%">
+								<h4 class="w3-center">Benifit 4<h4>
+								<div class="w3-panel w3-center">
+									<p>Information about benifit will go here.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div id="office3" class="w3-panel officeInfo"  style="display:none">
+					<div class="w3-card-4 w3-margin-bottom w3-col m3 l3 w3-cell">
+					<script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script><div style='overflow:hidden;height:356px;width:462px;'><div id='gmap_canvas' style='height:356px;width:462px;'></div><div><small><a href="http://embedgooglemaps.com">Click here to generate your map!</a></small></div><div><small><a href="http://www.genkigirl.net/">best alternatives for forex bot</a></small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><script type='text/javascript'>function init_map(){var myOptions = {zoom:10,center:new google.maps.LatLng(53.4807593,-2.2426305000000184),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(53.4807593,-2.2426305000000184)});infowindow = new google.maps.InfoWindow({content:'<strong>Title</strong><br>Carlisle, United Kingdom<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>						
+						<div class="w3-container w3-center w3-teal">
+							<h3>Office 3</h3>
+							<h4>Development</h4>
+							<p>Telephone: 016973 12345</p>
+							<p>Fax: 00348294</p>
+						</div>
+					</div>
+					<div class="w3-panel w3-col m9 l9">
+						<div class="w3-panel w3-grey">
+							<p>Lorem ipsum dolor sit amet, id has impedit erroribus constituto, mei omnis bonorum phaedrum no. Sit graece aperiam aliquam ei, cu vis dicta mollis. Sed alterum corpora at, ne eius copiosae quo. Cu qui omnis saepe, ad cum mazim congue. At dicam tollit audiam vel, his id consul oblique adversarium. Qualisque appellantur per eu.</p>
+							<p>Posidonium intellegam sed ne. Nominavi dignissim mea ea. Ne justo putent appareat pri, eam eu numquam sanctus, vim libris quidam no. Tacimates neglegentur ut pri. Malorum praesent eos ut.</p>
+						</div>
+						<div class="w3-container w3-col m3 l3">
+							<div class="w3-panel">
+								<img src="location1.jpg" class="w3-circle" alt="" style="width:100%">
+								<h4 class="w3-center">Benifit 1<h4>
+								<div class="w3-panel w3-center">
+									<p>Information about benifit will go here.</p>
+								</div>
+							</div>
+						</div>
+						<div class="w3-container w3-col m3 l3">
+							<div class="w3-panel">
+								<img src="location2.jpg" class="w3-circle" alt="" style="width:100%">
+								<h4 class="w3-center">Benifit 2<h4>
+								<div class="w3-panel w3-center">
+									<p>Information about benifit will go here.</p>
+								</div>
+							</div>
+						</div>
+						<div class="w3-container w3-col m3 l3">
+							<div class="w3-panel">
+								<img src="location3.jpg" class="w3-circle" alt="" style="width:100%">
+								<h4 class="w3-center">Benifit 3<h4>
+								<div class="w3-panel w3-center">
+									<p>Information about benifit will go here.</p>
+								</div>
+							</div>
+						</div>
+						<div class="w3-container w3-col m3 l3">
+							<div class="w3-panel">
+								<img src="location4.jpg" class="w3-circle" alt="" style="width:100%">
+								<h4 class="w3-center">Benifit 4<h4>
+								<div class="w3-panel w3-center">
+									<p>Information about benifit will go here.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div id="office4" class="w3-panel officeInfo" style="display:none">
+					<div class="w3-card-4 w3-margin-bottom w3-col m3 l3 w3-cell">
+						<script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script><div style='overflow:hidden;height:356px;width:462px;'><div id='gmap_canvas' style='height:356px;width:462px;'></div><div><small><a href="http://embedgooglemaps.com">Click here to generate your map!</a></small></div><div><small><a href="http://www.masoun-loubnan.org/">coupon codes on products</a></small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><script type='text/javascript'>function init_map(){var myOptions = {zoom:10,center:new google.maps.LatLng(54.892473,-2.9329310000000532),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(54.892473,-2.9329310000000532)});infowindow = new google.maps.InfoWindow({content:'<strong>Title</strong><br>Lancaster, United Kingdom<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
+						<div class="w3-container w3-center w3-teal">
+							<h3>Office 4</h3>
+							<h4>Development</h4>
+							<p>Telephone: 016973 12345</p>
+							<p>Fax: 00348294</p>
+						</div>
+					</div>
+					<div class="w3-panel w3-col m9 l9">
+						<div class="w3-panel w3-grey">
+							<p>Lorem ipsum dolor sit amet, id has impedit erroribus constituto, mei omnis bonorum phaedrum no. Sit graece aperiam aliquam ei, cu vis dicta mollis. Sed alterum corpora at, ne eius copiosae quo. Cu qui omnis saepe, ad cum mazim congue. At dicam tollit audiam vel, his id consul oblique adversarium. Qualisque appellantur per eu.</p>
+							<p>Posidonium intellegam sed ne. Nominavi dignissim mea ea. Ne justo putent appareat pri, eam eu numquam sanctus, vim libris quidam no. Tacimates neglegentur ut pri. Malorum praesent eos ut.</p>
+						</div>
+						<div class="w3-container w3-col m3 l3">
+							<div class="w3-panel">
+								<img src="location1.jpg" class="w3-circle" alt="" style="width:100%">
+								<h4 class="w3-center">Benifit 1<h4>
+								<div class="w3-panel w3-center">
+									<p>Information about benifit will go here.</p>
+								</div>
+							</div>
+						</div>
+						<div class="w3-container w3-col m3 l3">
+							<div class="w3-panel">
+								<img src="location2.jpg" class="w3-circle" alt="" style="width:100%">
+								<h4 class="w3-center">Benifit 2<h4>
+								<div class="w3-panel w3-center">
+									<p>Information about benifit will go here.</p>
+								</div>
+							</div>
+						</div>
+						<div class="w3-container w3-col m3 l3">
+							<div class="w3-panel">
+								<img src="location3.jpg" class="w3-circle" alt="" style="width:100%">
+								<h4 class="w3-center">Benifit 3<h4>
+								<div class="w3-panel w3-center">
+									<p>Information about benifit will go here.</p>
+								</div>
+							</div>
+						</div>
+						<div class="w3-container w3-col m3 l3">
+							<div class="w3-panel">
+								<img src="location4.jpg" class="w3-circle" alt="" style="width:100%">
+								<h4 class="w3-center">Benifit 4<h4>
+								<div class="w3-panel w3-center">
+									<p>Information about benifit will go here.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<script>
+			function openOffice(evt, OfficeName, OfficePic) {
+					var i, officeLinks;
+					var x = document.getElementsByClassName("officeInfo");
+					var y = document.getElementsByClassName("offPic");
+					for (i = 0; i < x.length; i++) {
+						x[i].style.display = "none";
+					}
+					document.getElementById(OfficeName).style.display = "block";
+					for (i = 0; i < x.length; i++) {
+						y[i].style.display = "none";
+					}
+					document.getElementById(OfficePic).style.display = "block";
+					officeLinks = document.getElementsByClassName("officeLink");
+					for (i = 0; i < x.length; i++) {
+						officeLinks[i].className = officeLinks[i].className.replace(" w3-teal", "");
+					}
+					evt.currentTarget.className += " w3-teal";
+				}
+			</script>
+		</div>
+		
+		<div id="departments" class="w3-panel w3-white option" style="display:none">
+			<div class="w3-bar w3-teal w3-mobile">
+			  <button class="w3-bar-item w3-button" onclick="openDep('Depart1');">Department 1</button>
+			  <button class="w3-bar-item w3-button" onclick="openDep('Depart2');">Department 2</button>
+			  <button class="w3-bar-item w3-button" onclick="openDep('Depart3');">Department 3</button>
+			</div>
+			
+			<div id="Depart1" class="w3-container w3-grey w3-mobile department">
+				<div class="w3-container w3-col m12 l12 w3-cell-row">
+					<div class="w3-card-4 w3-margin-bottom w3-margin-top w3-col m3 l3 w3-cell">
+						<img src="departmentHead1.jpg" alt="Department Head Photo" width="100%">
+						<div class="w3-container w3-center w3-teal">
+							<h3>Jane Doe</h3>
+							<h4>Head Of Department 1</h4>
+							<p>Telephone: 016973 12345</p>
+							<p>Email: janedoe@company.com</p>
+							<div class="w3-panel w3-cell-row">
+								<div class="w3-half">
+									<button class="w3-button w3-light-grey">LinkedIn</button>
+								</div>
+								<div class="w3-half">
+									<button class="w3-button w3-light-grey">Website</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="w3-container w3-cell w3-col m9 l9">
+						<div class="w3-cell-row">
+							<div class="w3-cell w3-col s10 m10 l10">
+								<p class="w3-xxlarge w3-serif">
+								<i>"Words from the Department Head."</i></p>
+								<p>Jane Doe, Department Head</p>
+							</div>
+							<div class="w3-third w3-leftbar w3-margin-top  w3-col s2 m2 l2">
+								<button class="w3-button w3-left w3-round-xxlarge w3-hover-teal" style="width:100%">Follow Department</button>
+								<button class="w3-button w3-left w3-round-xxlarge w3-hover-teal" style="width:100%">Contact Employer</button>
+								<button class="w3-button w3-left w3-round-xxlarge w3-hover-teal" style="width:100%">Submit Review</button>
+							</div>
+						</div>
+						<div id="officeSet" class="w3-panel w3-rightbar w3-col m8 l8 w3-cell">
+							<div class="w3-panel w3-half w3-cell">
+								<img src="department1.jpg" class="w3-circle w3-center" width="100%">
+							</div>
+							<div class="w3-panel w3-half w3-cell">
+								<h4>Department Brief</h4>
+								<p>Department 1 Specialises in abc and xyz. More Info will go here. This will be limited by character count tbc. Lorem ipsum dolor sit amet, pri duis semper ei, cu percipitur consequuntur sea, duo brute lorem complectitur in. Justo facilis antiopam ei est, et atqui nostro fabellas eum. Errem intellegam ut sed.</p>
+							</div>
+							<div class="w3-container w3-center">
+								<h5><b><i>Available Jobs: </b></i><span class="w3-badge w3-red">0</span></h5>
+							</div>
+							<div class="w3-padding-16 w3-center">
+								<button class="w3-btn w3-round-xlarge w3-teal w3-hover-white ">More Information</button>
+								<button class="w3-btn w3-round-xlarge w3-teal w3-hover-white ">View Jobs</button>
+							</div>
+						</div>
+						<div id="profileSet" class="w3-panel w3-col m4 l4 w3-cell">
+							<div class="w3-container w3-margin-bottom">
+								<div class="w3-panel w3-cell w3-col s4 m4 l4">
+									<img src="cross.png" class="w3-center" style="width:100%">
+								</div>
+								<div class="w3-panel w3-right w3-cell w3-col s8 m8 l8">
+									<h4>Department is not a match for your profile</h4>
+								</div>
+							</div>
+							<p><i>Paragraph to explain what factors the candidate would like at department</i></p>
+							<p><i>Paragraph to explain what facotors the candidate wouldn't like at department</i></p>
+							
+							<div class="w3-container">
+								<table class="w3-table">
+									<tr>
+										  <td>Attribute 1</td>
+										  <td>44%</td>
+									</tr>
+									<tr>
+										  <td>Attribute 2</td>
+										  <td>26%</td>
+									</tr>
+									<tr>
+										  <td>Attribute 3</td>
+										  <td>23%</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="Depart2" class="w3-container w3-grey w3-mobile department" style="display:none">
+				<div class="w3-container w3-col m12 l12 w3-cell-row">
+					<div class="w3-card-4 w3-margin-bottom w3-margin-top w3-col m3 l3 w3-cell">
+						<img src="departmentHead2.jpg" alt="Department Head Photo" width="100%">
+						<div class="w3-container w3-center w3-teal">
+							<h3>John Doe</h3>
+							<h4>Head Of Department 2</h4>
+							<p>Telephone: 016973 54321</p>
+							<p>Email: johndoe@company.com</p>
+							<div class="w3-panel w3-cell-row">
+								<div class="w3-half">
+									<button class="w3-button w3-light-grey">LinkedIn</button>
+								</div>
+								<div class="w3-half">
+									<button class="w3-button w3-light-grey">Website</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="w3-container w3-cell w3-col m9 l9">
+						<div class="w3-cell-row">
+							<div class="w3-cell w3-col s10 m10 l10">
+								<p class="w3-xxlarge w3-serif">
+								<i>"Words from the Department Head."</i></p>
+								<p>John Doe, Department Head</p>
+							</div>
+							<div class="w3-third w3-leftbar w3-margin-top  w3-col s2 m2 l2">
+								<button class="w3-button w3-left w3-round-xxlarge w3-hover-teal" style="width:100%">Follow Department</button>
+								<button class="w3-button w3-left w3-round-xxlarge w3-hover-teal" style="width:100%">Contact Employer</button>
+								<button class="w3-button w3-left w3-round-xxlarge w3-hover-teal" style="width:100%">Submit Review</button>
+							</div>
+						</div>
+						<div id="officeSet" class="w3-panel w3-rightbar w3-col m8 l8 w3-cell">
+							<div class="w3-panel w3-half w3-cell">
+								<img src="department2.jpeg" class="w3-circle w3-center" width="100%">
+							</div>
+							<div class="w3-panel w3-half w3-cell">
+								<h4><b>Department Brief</b></h4>
+								<p>Department 2 Specialises in abc and xyz. More Info will go here. This will be limited by character count tbc. Lorem ipsum dolor sit amet, pri duis semper ei, cu percipitur consequuntur sea, duo brute lorem complectitur in. Justo facilis antiopam ei est, et atqui nostro fabellas eum. Errem intellegam ut sed.</p>
+								
+							</div>
+							<div class="w3-container w3-center">
+								<h5><b><i>Available Jobs: </b></i><span class="w3-badge w3-teal">3</span></p></h5>
+							</div>
+							<div class="w3-padding-16 w3-center">
+								<button class="w3-btn w3-round-xlarge w3-teal w3-hover-white ">More Information</button>
+								<button class="w3-btn w3-round-xlarge w3-teal w3-hover-white ">View Jobs</button>
+							</div>
+						</div>
+						<div id="profileSet" class="w3-panel w3-col m4 l4 w3-cell">
+							<div class="w3-container w3-margin-bottom">
+								<div class="w3-panel w3-cell w3-col s4 m4 l4">
+									<img src="bulbOff.png" class="w3-center" style="width:100%">
+								</div>
+								<div class="w3-panel w3-right w3-cell w3-col s8 m8 l8">
+									<h4>You have a decent match with Department!</h4>
+								</div>
+							</div>
+							<p><i>Paragraph to explain what factors the candidate would like at department</i></p>
+							<p><i>Paragraph to explain what facotors the candidate wouldn't like at department</i></p>
+							
+							<div class="w3-container">
+								<table class="w3-table">
+									<tr>
+										  <td>Attribute 1</td>
+										  <td>67%</td>
+									</tr>
+									<tr>
+										  <td>Attribute 2</td>
+										  <td>66%</td>
+									</tr>
+									<tr>
+										  <td>Attribute 3</td>
+										  <td>60%</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="Depart3" class="w3-container w3-grey w3-mobile department" style="display:none">
+				<div class="w3-container w3-col m12 l12 w3-cell-row">
+					<div class="w3-card-4 w3-margin-bottom w3-margin-top w3-col m3 l3 w3-cell">
+						<img src="departmentHead3.jpg" alt="Department Head Photo" width="100%">
+						<div class="w3-container w3-center w3-teal">
+							<h3>Janet Doe</h3>
+							<h4>Head Of Department 3</h4>
+							<p>Telephone: 016973 11111</p>
+							<p>Email: janetdoe@company.com</p>
+							<div class="w3-panel w3-cell-row">
+								<div class="w3-half">
+									<button class="w3-button w3-light-grey">LinkedIn</button>
+								</div>
+								<div class="w3-half">
+									<button class="w3-button w3-light-grey">Website</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="w3-container w3-cell w3-col m9 l9">
+						<div class="w3-cell-row">
+							<div class="w3-cell w3-col s10 m10 l10">
+								<p class="w3-xxlarge w3-serif">
+								<i>"Words from the Department Head."</i></p>
+								<p>Janet Doe, Department Head</p>
+							</div>
+							<div class="w3-third w3-leftbar w3-margin-top  w3-col s2 m2 l2">
+								<button class="w3-button w3-left w3-round-xxlarge w3-hover-teal" style="width:100%">Follow Department</button>
+								<button class="w3-button w3-left w3-round-xxlarge w3-hover-teal" style="width:100%">Contact Employer</button>
+								<button class="w3-button w3-left w3-round-xxlarge w3-hover-teal" style="width:100%">Submit Review</button>
+							</div>
+						</div>
+						<div id="officeSet" class="w3-panel w3-rightbar w3-col m8 l8 w3-cell">
+							<div class="w3-panel w3-half w3-cell">
+								<img src="department3.jpg" class="w3-circle w3-center" width="100%">
+							</div>
+							<div class="w3-panel w3-half w3-cell">
+								<h4><b>Department Brief</b></h4>
+								<p>Department 2 Specialises in abc and xyz. More Info will go here. This will be limited by character count tbc. Lorem ipsum dolor sit amet, pri duis semper ei, cu percipitur consequuntur sea, duo brute lorem complectitur in. Justo facilis antiopam ei est, et atqui nostro fabellas eum. Errem intellegam ut sed.</p>
+								
+							</div>
+							<div class="w3-container w3-center">
+								<h5><b><i>Available Jobs: </b></i><span class="w3-badge w3-teal">6</span></p></h5>
+							</div>
+							<div class="w3-padding-16 w3-center">
+								<button class="w3-btn w3-round-xlarge w3-teal w3-hover-white ">More Information</button>
+								<button class="w3-btn w3-round-xlarge w3-teal w3-hover-white ">View Jobs</button>
+							</div>
+						</div>
+						<div id="profileSet" class="w3-panel w3-col m4 l4 w3-cell">
+							<div class="w3-container w3-margin-bottom">
+								<div class="w3-panel w3-cell w3-col s4 m4 l4">
+									<img src="bulb.png" class="w3-center" style="width:100%">
+								</div>
+								<div class="w3-panel w3-right w3-cell w3-col s8 m8 l8">
+									<h4>You have a high match with Department!</h4>
+								</div>
+							</div>
+							<p><i>Paragraph to explain what factors the candidate would like at department</i></p>
+							<p><i>Paragraph to explain what facotors the candidate wouldn't like at department</i></p>
+							
+							<div class="w3-container">
+								<table class="w3-table">
+									<tr>
+										  <td>Attribute 1</td>
+										  <td>89%</td>
+									</tr>
+									<tr>
+										  <td>Attribute 2</td>
+										  <td>80%</td>
+									</tr>
+									<tr>
+										  <td>Attribute 3</td>
+										  <td>79%</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<script>
+				function openDep(TabName) {
+					var i;
+					var x = document.getElementsByClassName("department");
+					for (i = 0; i < x.length; i++) {
+						x[i].style.display = "none";
+					}
+					document.getElementById(TabName).style.display = "block";
+				}
+			</script>
+		</div>
+		
+		
+		<script>
+			function openTab(evt, TabName) {
+				var i, x, tablinks;
+				x = document.getElementsByClassName("option");
+				for (i = 0; i < x.length; i++) {
+					x[i].style.display = "none";
+				}
+				tablinks = document.getElementsByClassName("tablink");
+				for (i = 0; i < x.length; i++) {
+					tablinks[i].className = tablinks[i].className.replace(" w3-border-black", "");
+				}
+				document.getElementById(TabName).style.display = "block";
+				evt.currentTarget.firstElementChild.className += " w3-border-black";
+			}
+		</script>
+
+	</div>
+	
+	
+	
+</body>
+</html>

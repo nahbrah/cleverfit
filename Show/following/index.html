@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+ <html>
+ <title>CleverFit</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<body>
+	<div class="w3-container w3-teal">
+		<h1><i class="material-icons">lightbulb_outline</i>
+			Clever Fit
+		</h1>
+	</div>
+	<div class "w3-top">
+		<div class="w3-nav w3-teal w3-large" id="mainnav">
+			<a href="#home" class="w3-bar-item w3-button w3-mobile">Home</a>
+			<a href="#jobs" class="w3-bar-item w3-button w3-mobile">Following</a>
+			<a href="#about" class="w3-bar-item w3-button w3-mobile">About</a>
+			<a href="#profile" class="w3-bar-item w3-button w3-mobile">Profile</a>
+			<i class="material-icons w3-bar-item w3-button w3-mobile w3-right">search</i>
+		</div>
+	</div>
+	
+	<div class="w3-panel">
+		<div class="w3-col s1 m1 l1">
+			<img src="emptyProfilePic.jpg" alt="Profile picture" class="w3-circle" style="max-width:100px">
+		</div>
+		<div class="w3-col s3 m3 l3">
+			<div class="w3-row">
+				<h3>Candidate Name</h3>
+			</div>
+			<button class="w3-button w3-light-grey w3-round-xlarge">View</button>
+			<button class="w3-button w3-light-grey w3-round-xlarge">Edit</button>
+		</div>
+		<div class="w3-col s8 m4 l4">
+			<h1 class="w3-center">Following</h1>
+		</div>
+	</div>
+	
+	<div class="w3-panel w3-center w3-light-grey" style="width:80%; margin-left:10%">
+		<div class="w3-container w3-cell-row w3-border-bottom">
+			<div class="w3-cell w3-padding-16 w3-col s3 m3 l3">
+				<img src="tgg-logo.jpg" alt="Company Logo" style="max-width:200px">
+				<h4 class="w3-padding">Company 1</h4>
+				<h4 class="w3-padding">Overall Match: 80%</h4>
+			</div>
+			<div class="w3-cell w3-border-right w3-col s3 m3 l3">
+				<h4>Company Options</h4>
+				<button class="w3-button w3-block w3-padding-large w3-left-align">Company Profile</button>
+				<button class="w3-button w3-block w3-padding-large w3-left-align">Highlighted Applications</button>
+				<button class="w3-button w3-block w3-padding-large w3-left-align">Interested Applications</button>
+			</div>
+			<div class="w3-cell w3-col s3 m3 l3">
+				<h4>Department Options</h4>
+				<button class="w3-button w3-block w3-padding-large w3-left-align">Employer LinkedIn</button>
+				<button class="w3-button w3-block w3-padding-large w3-left-align">Unfollow Employer</button>
+				<button class="w3-button w3-block w3-padding-large w3-left-align" onclick="myAccFunc('acc1')">Available Jobs: (insert number)<i class="fa fa-caret-down"></i></button>
+				<div id="acc1" class="w3-bar-block w3-hide w3-light-grey w3-card-4">
+					<a href="#" class="w3-bar-item w3-button">Job Link 1</a>
+					<a href="#" class="w3-bar-item w3-button">Job Link 2</a>
+					<a href="#" class="w3-bar-item w3-button">Job Link 3</a>
+					<a href="#" class="w3-bar-item w3-button">Job Link 4</a>
+					<a href="#" class="w3-bar-item w3-button">Job Link 5</a>
+				</div>
+			</div>
+			<div class="w3-cell w3-col s3 m3 l3">
+				<div class="w3-content w3-display-container">
+					<div class="w3-display-container mySlides1">
+						<img src="departmentHead1.jpg" style="max-width:200px">
+						<div class="w3-display-bottommiddle w3-display-hover w3-large w3-container w3-padding-16">
+							Name 1
+						</div>
+					</div>
+					<div class="w3-display-container mySlides1">
+						<img src="departmentHead2.jpg" style="max-width:200px">
+						<div class="w3-display-bottommiddle w3-display-hover w3-large w3-container w3-padding-16">
+							Name 2
+						</div>
+					</div>
+					<div class="w3-display-container mySlides1">
+						<img src="departmentHead3.jpg" style="max-width:200px">
+						<div class="w3-display-bottommiddle w3-display-hover w3-large w3-container">
+							Name 3
+						</div>
+					</div>
+
+					<button class="w3-button w3-black w3-display-left" onclick="plusDivs1(-1)">&#10094;</button>
+					<button class="w3-button w3-black w3-display-right" onclick="plusDivs1(1)">&#10095;</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="w3-panel w3-center w3-light-grey" style="width:80%; margin-left:10%">
+		<div class="w3-container w3-cell-row w3-border-bottom">
+			<div class="w3-cell w3-padding-16 w3-col s3 m3 l3">
+				<img src="tgg-logo.jpg" alt="Company Logo" style="max-width:200px">
+				<h4 class="w3-padding">Company 2</h4>
+				<h4 class="w3-padding">Overall Match: 78%</h4>
+			</div>
+			<div class="w3-cell w3-border-right w3-col s3 m3 l3">
+				<h4>Company Options</h4>
+				<button class="w3-button w3-block w3-padding-large w3-left-align">Company Profile</button>
+				<button class="w3-button w3-block w3-padding-large w3-left-align">Highlighted Applications</button>
+				<button class="w3-button w3-block w3-padding-large w3-left-align">Interested Applications</button>
+			</div>
+			<div class="w3-cell w3-col s3 m3 l3">
+				<h4>Department Options</h4>
+				<button class="w3-button w3-block w3-padding-large w3-left-align">Employer LinkedIn</button>
+				<button class="w3-button w3-block w3-padding-large w3-left-align">Unfollow Employer</button>
+				<button class="w3-button w3-block w3-padding-large w3-left-align" onclick="myAccFunc('acc1')">Available Jobs: (insert number)<i class="fa fa-caret-down"></i></button>
+				<div id="acc1" class="w3-bar-block w3-hide w3-light-grey w3-card-4">
+					<a href="#" class="w3-bar-item w3-button">Job Link 1</a>
+					<a href="#" class="w3-bar-item w3-button">Job Link 2</a>
+					<a href="#" class="w3-bar-item w3-button">Job Link 3</a>
+					<a href="#" class="w3-bar-item w3-button">Job Link 4</a>
+					<a href="#" class="w3-bar-item w3-button">Job Link 5</a>
+				</div>
+			</div>
+			<div class="w3-cell w3-col s3 m3 l3">
+				<div class="w3-content w3-display-container">
+					<div class="w3-display-container mySlides2">
+						<img src="departmentHead1.jpg" style="max-width:200px">
+						<div class="w3-display-bottommiddle w3-display-hover w3-large w3-container w3-padding-16">
+							Name 1
+						</div>
+					</div>
+					<div class="w3-display-container mySlides2">
+						<img src="departmentHead2.jpg" style="max-width:200px">
+						<div class="w3-display-bottommiddle w3-display-hover w3-large w3-container w3-padding-16">
+							Name 2
+						</div>
+					</div>
+					<div class="w3-display-container mySlides2">
+						<img src="departmentHead3.jpg" style="max-width:200px">
+						<div class="w3-display-bottommiddle w3-display-hover w3-large w3-container">
+							Name 3
+						</div>
+					</div>
+
+					<button class="w3-button w3-black w3-display-left" onclick="plusDivs2(-1)">&#10094;</button>
+					<button class="w3-button w3-black w3-display-right" onclick="plusDivs2(1)">&#10095;</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="w3-panel w3-center w3-light-grey" style="width:80%; margin-left:10%">
+		<div class="w3-container w3-cell-row w3-border-bottom">
+			<div class="w3-cell w3-padding-16 w3-col s3 m3 l3">
+				<img src="tgg-logo.jpg" alt="Company Logo" style="max-width:200px">
+				<h4 class="w3-padding">Company 3</h4>
+				<h4 class="w3-padding">Overall Match: 71%</h4>
+			</div>
+			<div class="w3-cell w3-border-right w3-col s3 m3 l3">
+				<h4>Company Options</h4>
+				<button class="w3-button w3-block w3-padding-large w3-left-align">Company Profile</button>
+				<button class="w3-button w3-block w3-padding-large w3-left-align">Highlighted Applications</button>
+				<button class="w3-button w3-block w3-padding-large w3-left-align">Interested Applications</button>
+			</div>
+			<div class="w3-cell w3-col s3 m3 l3">
+				<h4>Department Options</h4>
+				<button class="w3-button w3-block w3-padding-large w3-left-align">Employer LinkedIn</button>
+				<button class="w3-button w3-block w3-padding-large w3-left-align">Unfollow Employer</button>
+				<button class="w3-button w3-block w3-padding-large w3-left-align" onclick="myAccFunc('acc1')">Available Jobs: (insert number)<i class="fa fa-caret-down"></i></button>
+				<div id="acc1" class="w3-bar-block w3-hide w3-light-grey w3-card-4">
+					<a href="#" class="w3-bar-item w3-button">Job Link 1</a>
+					<a href="#" class="w3-bar-item w3-button">Job Link 2</a>
+					<a href="#" class="w3-bar-item w3-button">Job Link 3</a>
+					<a href="#" class="w3-bar-item w3-button">Job Link 4</a>
+					<a href="#" class="w3-bar-item w3-button">Job Link 5</a>
+				</div>
+			</div>
+			<div class="w3-cell w3-col s3 m3 l3">
+				<div class="w3-content w3-display-container">
+					<div class="w3-display-container mySlides3">
+						<img src="departmentHead1.jpg" style="max-width:200px">
+						<div class="w3-display-bottommiddle w3-display-hover w3-large w3-container w3-padding-16">
+							Name 1
+						</div>
+					</div>
+					<div class="w3-display-container mySlides3">
+						<img src="departmentHead2.jpg" style="max-width:200px">
+						<div class="w3-display-bottommiddle w3-display-hover w3-large w3-container w3-padding-16">
+							Name 2
+						</div>
+					</div>
+					<div class="w3-display-container mySlides3">
+						<img src="departmentHead3.jpg" style="max-width:200px">
+						<div class="w3-display-bottommiddle w3-display-hover w3-large w3-container">
+							Name 3
+						</div>
+					</div>
+
+					<button class="w3-button w3-black w3-display-left" onclick="plusDivs3(-1)">&#10094;</button>
+					<button class="w3-button w3-black w3-display-right" onclick="plusDivs3(1)">&#10095;</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="w3-panel w3-center w3-light-grey" style="width:80%; margin-left:10%">
+		<div class="w3-container w3-cell-row w3-border-bottom">
+			<div class="w3-cell w3-padding-16 w3-col s3 m3 l3">
+				<img src="tgg-logo.jpg" alt="Company Logo" style="max-width:200px">
+				<h4 class="w3-padding">Company 4</h4>
+				<h4 class="w3-padding">Overall Match: 68%</h4>
+			</div>
+			<div class="w3-cell w3-border-right w3-col s3 m3 l3">
+				<h4>Company Options</h4>
+				<button class="w3-button w3-block w3-padding-large w3-left-align">Company Profile</button>
+				<button class="w3-button w3-block w3-padding-large w3-left-align">Highlighted Applications</button>
+				<button class="w3-button w3-block w3-padding-large w3-left-align">Interested Applications</button>
+			</div>
+			<div class="w3-cell w3-col s3 m3 l3">
+				<h4>Department Options</h4>
+				<button class="w3-button w3-block w3-padding-large w3-left-align">Employer LinkedIn</button>
+				<button class="w3-button w3-block w3-padding-large w3-left-align">Unfollow Employer</button>
+				<button class="w3-button w3-block w3-padding-large w3-left-align" onclick="myAccFunc('acc1')">Available Jobs: (insert number)<i class="fa fa-caret-down"></i></button>
+				<div id="acc1" class="w3-bar-block w3-hide w3-light-grey w3-card-4">
+					<a href="#" class="w3-bar-item w3-button">Job Link 1</a>
+					<a href="#" class="w3-bar-item w3-button">Job Link 2</a>
+					<a href="#" class="w3-bar-item w3-button">Job Link 3</a>
+					<a href="#" class="w3-bar-item w3-button">Job Link 4</a>
+					<a href="#" class="w3-bar-item w3-button">Job Link 5</a>
+				</div>
+			</div>
+			<div class="w3-cell w3-col s3 m3 l3">
+				<div class="w3-content w3-display-container">
+					<div class="w3-display-container mySlides4">
+						<img src="departmentHead1.jpg" style="max-width:200px">
+						<div class="w3-display-bottommiddle w3-display-hover w3-large w3-container w3-padding-16">
+							Name 1
+						</div>
+					</div>
+					<div class="w3-display-container mySlides4">
+						<img src="departmentHead2.jpg" style="max-width:200px">
+						<div class="w3-display-bottommiddle w3-display-hover w3-large w3-container w3-padding-16">
+							Name 2
+						</div>
+					</div>
+					<div class="w3-display-container mySlides4">
+						<img src="departmentHead3.jpg" style="max-width:200px">
+						<div class="w3-display-bottommiddle w3-display-hover w3-large w3-container">
+							Name 3
+						</div>
+					</div>
+
+					<button class="w3-button w3-black w3-display-left" onclick="plusDivs4(-1)">&#10094;</button>
+					<button class="w3-button w3-black w3-display-right" onclick="plusDivs4(1)">&#10095;</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="w3-panel w3-center w3-light-grey" style="width:80%; margin-left:10%">
+		<div class="w3-container w3-cell-row w3-border-bottom">
+			<div class="w3-cell w3-padding-16 w3-col s3 m3 l3">
+				<img src="tgg-logo.jpg" alt="Company Logo" style="max-width:200px">
+				<h4 class="w3-padding">Company 5</h4>
+				<h4 class="w3-padding">Overall Match: 65%</h4>
+			</div>
+			<div class="w3-cell w3-border-right w3-col s3 m3 l3">
+				<h4>Company Options</h4>
+				<button class="w3-button w3-block w3-padding-large w3-left-align">Company Profile</button>
+				<button class="w3-button w3-block w3-padding-large w3-left-align">Highlighted Applications</button>
+				<button class="w3-button w3-block w3-padding-large w3-left-align">Interested Applications</button>
+			</div>
+			<div class="w3-cell w3-col s3 m3 l3">
+				<h4>Department Options</h4>
+				<button class="w3-button w3-block w3-padding-large w3-left-align">Employer LinkedIn</button>
+				<button class="w3-button w3-block w3-padding-large w3-left-align">Unfollow Employer</button>
+				<button class="w3-button w3-block w3-padding-large w3-left-align" onclick="myAccFunc('acc1')">Available Jobs: (insert number)<i class="fa fa-caret-down"></i></button>
+				<div id="acc1" class="w3-bar-block w3-hide w3-light-grey w3-card-4">
+					<a href="#" class="w3-bar-item w3-button">Job Link 1</a>
+					<a href="#" class="w3-bar-item w3-button">Job Link 2</a>
+					<a href="#" class="w3-bar-item w3-button">Job Link 3</a>
+					<a href="#" class="w3-bar-item w3-button">Job Link 4</a>
+					<a href="#" class="w3-bar-item w3-button">Job Link 5</a>
+				</div>
+			</div>
+			<div class="w3-cell w3-col s3 m3 l3">
+				<div class="w3-content w3-display-container">
+					<div class="w3-display-container mySlides5">
+						<img src="departmentHead1.jpg" style="max-width:200px">
+						<div class="w3-display-bottommiddle w3-display-hover w3-large w3-container w3-padding-16">
+							Name 1
+						</div>
+					</div>
+					<div class="w3-display-container mySlides5">
+						<img src="departmentHead2.jpg" style="max-width:200px">
+						<div class="w3-display-bottommiddle w3-display-hover w3-large w3-container w3-padding-16">
+							Name 2
+						</div>
+					</div>
+					<div class="w3-display-container mySlides5">
+						<img src="departmentHead3.jpg" style="max-width:200px">
+						<div class="w3-display-bottommiddle w3-display-hover w3-large w3-container">
+							Name 3
+						</div>
+					</div>
+
+					<button class="w3-button w3-black w3-display-left" onclick="plusDivs5(-1)">&#10094;</button>
+					<button class="w3-button w3-black w3-display-right" onclick="plusDivs5(1)">&#10095;</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="w3-panel">
+		<div class="w3-bar w3-center">
+			<a href="#" class="w3-button">&laquo;</a>
+			<a href="#" class="w3-button w3-teal">1</a>
+			<a href="#" class="w3-button">2</a>
+			<a href="#" class="w3-button">3</a>
+			<a href="#" class="w3-button">4</a>
+			<a href="#" class="w3-button">5</a>
+			<a href="#" class="w3-button">...</a>
+			<a href="#" class="w3-button">&raquo;</a>
+		</div>
+	</div>
+	
+	<script>
+		var slideIndex1 = 1;
+		var slideIndex2 = 1;
+		var slideIndex3 = 1;
+		var slideIndex4 = 1;
+		var slideIndex5 = 1;
+		showDivs1(slideIndex1);
+		showDivs2(slideIndex2);
+		showDivs3(slideIndex3);
+		showDivs4(slideIndex4);
+		showDivs5(slideIndex5);
+
+		function plusDivs1(n) {
+		  showDivs1(slideIndex1 += n);
+		}
+		function plusDivs2(n) {
+		  showDivs2(slideIndex2 += n);
+		}
+		function plusDivs3(n) {
+		  showDivs3(slideIndex3 += n);
+		}
+		function plusDivs4(n) {
+		  showDivs4(slideIndex4 += n);
+		}
+		function plusDivs5(n) {
+		  showDivs5(slideIndex5 += n);
+		}
+
+		function showDivs1(n) {
+		  var i;
+		  var x = document.getElementsByClassName("mySlides1");
+		  if (n > x.length) {slideIndex1 = 1}    
+		  if (n < 1) {slideIndex1 = x.length}
+		  for (i = 0; i < x.length; i++) {
+			 x[i].style.display = "none";  
+		  }
+		  x[slideIndex1-1].style.display = "block";  
+		}
+		function showDivs2(n) {
+		  var i;
+		  var x = document.getElementsByClassName("mySlides2");
+		  if (n > x.length) {slideIndex2 = 1}    
+		  if (n < 1) {slideIndex2 = x.length}
+		  for (i = 0; i < x.length; i++) {
+			 x[i].style.display = "none";  
+		  }
+		  x[slideIndex2-1].style.display = "block";  
+		}
+		function showDivs3(n) {
+		  var i;
+		  var x = document.getElementsByClassName("mySlides3");
+		  if (n > x.length) {slideIndex3 = 1}    
+		  if (n < 1) {slideIndex3 = x.length}
+		  for (i = 0; i < x.length; i++) {
+			 x[i].style.display = "none";  
+		  }
+		  x[slideIndex3-1].style.display = "block";  
+		}
+		function showDivs4(n) {
+		  var i;
+		  var x = document.getElementsByClassName("mySlides4");
+		  if (n > x.length) {slideIndex4 = 1}    
+		  if (n < 1) {slideIndex4 = x.length}
+		  for (i = 0; i < x.length; i++) {
+			 x[i].style.display = "none";  
+		  }
+		  x[slideIndex4-1].style.display = "block";  
+		}
+		function showDivs5(n) {
+		  var i;
+		  var x = document.getElementsByClassName("mySlides5");
+		  if (n > x.length) {slideIndex5 = 1}    
+		  if (n < 1) {slideIndex5 = x.length}
+		  for (i = 0; i < x.length; i++) {
+			 x[i].style.display = "none";  
+		  }
+		  x[slideIndex5-1].style.display = "block";  
+		}
+		
+		function myAccFunc(accId) {
+			var x = document.getElementById(accId);
+			if (x.className.indexOf("w3-show") == -1) {
+				x.className += " w3-show";
+				x.previousElementSibling.className += " w3-green";
+			} else { 
+				x.className = x.className.replace(" w3-show", "");
+				x.previousElementSibling.className = 
+				x.previousElementSibling.className.replace(" w3-green", "");
+			}
+		}
+	</script>
+	
+</body>

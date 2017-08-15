@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+ <html>
+ <title>CleverFit</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<body>
+	<div class="w3-container w3-teal">
+		<h1><i class="material-icons">lightbulb_outline</i>
+			Clever Fit
+		</h1>
+	</div>
+	<div class "w3-top">
+		<div class="w3-nav w3-teal w3-large" id="mainnav">
+			<a href="#home" class="w3-bar-item w3-button w3-mobile">Home</a>
+			<a href="#jobs" class="w3-bar-item w3-button w3-mobile">Jobs</a>
+			<a href="#about" class="w3-bar-item w3-button w3-mobile">About</a>
+			<a href="#profile" class="w3-bar-item w3-button w3-mobile">Profile</a>
+			<i class="material-icons w3-bar-item w3-button w3-mobile w3-right">search</i>
+		</div>
+	</div>
+	
+	<div id="survey" class="w3-container section">
+		<div class="w3-panel w3-white w3-border w3-round-xlarge">
+			<div class="w3-cell-row">
+				<div id="option1" class="w3-panel w3-cell w3-tooltip w3-cell-row" draggable="true" style="width:50%" ondragstart="drag(event)">
+					<p class="w3-half w3-cell">Achievement Oriented</b>
+					<div class="w3-text w3-half w3-cell">
+						<div class="w3-cell-row">
+							<div class="w3-cell w3-center" style="width:10%">
+							</div>
+							<div id="a1" class="w3-cell w3-center" style="width:20%">
+								<span class="w3-badge w3-green w3-hover-grey" onclick="moveTo('option1', 'block1')">1</span>
+							</div>
+							<div id="a2" class="w3-cell w3-center" style="width:20%">
+								<span class="w3-badge w3-green w3-hover-grey" onclick="moveTo('option1', 'block2')">2</span>
+							</div>
+							<div id="a3" class="w3-cell w3-center" style="width:20%">
+								<span class="w3-badge w3-green w3-hover-grey" onclick="moveTo('option1', 'block3')">3</span>
+							</div>
+							<div id="a4" class="w3-cell w3-center" style="width:20%">
+								<span class="w3-badge w3-green w3-hover-grey" onclick="moveTo('option1', 'block4')">4</span>
+							</div>
+							<div class="w3-cell w3-center" style="width:10%">
+							</div>
+						</div>
+						<div class="w3-cell-row">
+							<div id="a5" class="w3-cell w3-center">
+								<span class="w3-badge w3-green w3-hover-grey" onclick="moveTo('option1', 'block5')">5</span>
+							</div>
+							<div id="a6" class="w3-cell w3-center">
+								<span class="w3-badge w3-green w3-hover-grey" onclick="moveTo('option1', 'block6')">6</span>
+							</div>
+							<div id="a7" class="w3-cell w3-center">
+								<span class="w3-badge w3-green w3-hover-grey" onclick="moveTo('option1', 'block7')">7</span>
+							</div>
+							<div id="a8" class="w3-cell w3-center">
+								<span class="w3-badge w3-green w3-hover-grey" onclick="moveTo('option1', 'block8')">8</span>
+							</div>
+							<div id="a9" class="w3-cell w3-center">
+								<span class="w3-badge w3-green w3-hover-grey" onclick="moveTo('option1', 'block9')">9</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		
+		<div class="w3-container w3-row">
+			<div class="w3-panel w3-quarter">
+				<div class="w3-card-2 w3-panel w3-round-xlarge">
+					<div class="w3-container w3-border-bottom">
+						<h3 class="w3-center">1: Least Important</h3>
+					</div>
+					<div id="block1" class="w3-container" ondrop="drop(event)" ondragover="allowDrop(event)" style="height:200px; overflow:scroll;">
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script>
+		//creates .remove() function
+		Element.prototype.remove = function() {
+			this.parentElement.removeChild(this);
+		}
+		NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
+			for(var i = this.length - 1; i >= 0; i--) {
+				if(this[i] && this[i].parentElement) {
+					this[i].parentElement.removeChild(this[i]);
+				}
+			}
+		}
+		
+		function moveTo(optionNumber, locationNumber) {
+			var toMove, wrap;
+			toMove = document.getElementById(optionNumber);
+			
+			document.getElementById(locationNumber).appendChild(toMove.cloneNode(true));
+			document.getElementById(optionNumber).remove();
+		}
+	</script>
+</body>

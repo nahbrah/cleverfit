@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+ <html>
+ <title>CleverFit</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<head>
+	<script>
+		function allowDrop(ev) {
+			ev.preventDefault();
+		}
+
+		function drag(ev) {
+			ev.dataTransfer.setData("text", ev.target.id);
+		}
+
+		function drop(ev) {
+			ev.preventDefault();
+			var data = ev.dataTransfer.getData("text");
+			ev.target.appendChild(document.getElementById(data));
+			document.getElementById(data).className = "w3-container w3-right";
+			document.getElementById(data).style.width = "100%";
+			document.getElementById(e.target.id).style.height = "100%";
+		}
+
+		function openPart(evt, partName) {
+		    var i, x, tablinks;
+		    x = document.getElementsByClassName("section");
+		    for (i = 0; i < x.length; i++) {
+			   x[i].style.display = "none";
+		    }
+		    tablinks = document.getElementsByClassName("tablink");
+		    for (i = 0; i < x.length; i++) {
+			   tablinks[i].className = tablinks[i].className.replace(" w3-border-red", "");
+		    }
+		    document.getElementById(partName).style.display = "block";
+		    evt.currentTarget.firstElementChild.className += " w3-border-red";
+		}
+		</script>
+</head>
+<body>
+	<div class="w3-container w3-teal">
+		<h1><i class="material-icons">lightbulb_outline</i>
+			Clever Fit
+		</h1>
+	</div>
+
+	<div class "w3-top">
+		<div class="w3-nav w3-teal w3-large" id="mainnav">
+			<a href="#home" class="w3-bar-item w3-button w3-mobile">Home</a>
+			<a href="#jobs" class="w3-bar-item w3-button w3-mobile">Jobs</a>
+			<a href="#about" class="w3-bar-item w3-button w3-mobile">About</a>
+			<a href="#profile" class="w3-bar-item w3-button w3-mobile">Profile</a>
+			<i class="material-icons w3-bar-item w3-button w3-mobile w3-right">search</i>
+		</div>
+	</div>
+	
+	<div class="w3-row">
+		<a href="javascript:void(0)" onclick="openPart(event, 'profile');">
+		    <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding w3-border-red">Profile</div>
+		</a>
+		<a href="javascript:void(0)" onclick="openPart(event, 'cultureSurvey');">
+		    <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Culture Survey</div>
+		</a>
+		<a href="javascript:void(0)" onclick="openPart(event, 'submit');">
+		    <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Submit</div>
+		</a>
+    </div>
+	
+	<div id="profile" class="w3-container w3-cell-row section">
+		<div class="w3-container w3-hide-small w3-cell w3-col m2 l2">
+		</div>
+		<div class="w3-container w3-cell w3-col s12 m8 l8">
+			<div class="w3-panel w3-light-grey">
+				<div class="w3-border-bottom">
+					<div class="w3-display-container w3-hover-opacity w3-left w3-col s4 m4 l4">
+						<img src="emptyProfilePic.jpg" alt="Profile picture" class="w3-circle" style="width:100%">
+						<div class="w3-display-middle w3-display-hover w3-container">
+							<button class="w3-button w3-black">Change Company Logo</button>
+						</div>
+					</div>
+					<div class="w3-panel w3-col s8 m8 l6">
+						<h2 class="w3-center">Candidate Profile</h2>
+					</div>
+					<div>
+						<button class=" w3-button w3-teal w3-padding-16 w3-section">Update Profile</button>
+					</div>
+					<div class="w3-panel w3-col s8 m8 l8">
+						<input class="w3-input w3-light-grey" type="text" placeholder="Your Name">
+					</div>
+					<div class="w3-panel w3-col s8 m8 l8">
+						<input class="w3-input w3-light-grey" type="digits" placeholder="Your Age">
+					</div>
+					<div class="w3-panel w3-col s8 m8 l8">
+						<input class="w3-input w3-light-grey" type="text" placeholder="Your Gender">
+					</div>
+					<div class="w3-panel">
+						<h4><i>Candidate Description Here...</i></h4>
+						<textarea rows="9" cols="100" type="text" class="w3-white" placeholder="Candidate Profile...">
+							Candidate Description. Lorem ipsum dolor sit amet, est wisi tempor consectetuer ei, has mundi intellegat ex, probo malis an sea. Homero tempor dissentiunt eos ne. Cu eum cibo utroque, patrioque assentior sit ea, graecis habemus accumsan cu has. Et natum electram constituam sit, mea virtute intellegebat id. 
+							An per diceret sapientem, eu debet corpora disputationi nec. Ius elitr perfecto efficiantur te, cu accumsan percipit recteque nec, mel autem aperiri laboramus ut. Aperiri admodum maiestatis ea duo. Dico sale nominavi vim ut, primis partiendo nec in. Ut vix omnium percipit, id sit feugait fuisset offendit, est fabulas forensibus adversarium et. Qui et voluptaria interesset. Te eam malorum appareat, id virtute interesset sed.
+						</textarea>
+						<p class="w3-padding-top">Max Word Count: 300</p>
+					</div>
+				</div>
+				<div class="w3-panel w3-border-bottom">
+					<div class="w3-container w3-col s12 m6 l6">
+						<div class="w3-content w3-display-container">
+							<div class="w3-display-container mySlides">
+							    <img src="doc1.jpg" style="width:100%">
+							    <div class="w3-display-bottomleft w3-display-hover w3-large w3-container w3-padding-16">
+									<button class="w3-button w3-light-grey w3-padding-16">Add Document</button>
+									<button class="w3-button w3-light-grey w3-padding-16">Change Document</button>
+							    </div>
+							</div>
+							<div class="w3-display-container mySlides">
+							    <img src="doc2.jpg" style="width:100%">
+							    <div class="w3-display-bottomleft w3-display-hover w3-large w3-container w3-padding-16">
+									<button class="w3-button w3-light-grey w3-padding-16">Add Document</button>
+									<button class="w3-button w3-light-grey w3-padding-16">Change Document</button>
+							    </div>
+							</div>
+							<div class="w3-display-container mySlides">
+							    <img src="doc3.jpg" style="width:100%">
+							    <div class="w3-display-bottomleft w3-display-hover w3-large w3-container w3-padding-16">
+									<button class="w3-button w3-light-grey w3-padding-16">Add Document</button>
+									<button class="w3-button w3-light-grey w3-padding-16">Change Document</button>
+							    </div>
+							</div>
+
+							<button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+							<button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+						</div>
+					</div>
+					<div class="w3-container w3-col s12 m6 l6">
+						<h3 class="w3-center">Edit Key Info</h3>
+						<p>Attach Documents, such as CV, References, and proof to work in the UK, to the left.</p>
+						<div class="w3-panel">
+							<input class="w3-input w3-light-grey" type="text" placeholder="National Insurance Number">
+						</div>
+						<div class="w3-panel">
+							<input class="w3-input w3-light-grey" type="text" placeholder="Ethnicity">
+						</div>
+						<div class="w3-panel">
+							<input class="w3-input w3-light-grey" type="text" placeholder="Nationality">
+						</div>
+						<div class="w3-panel">
+							<input class="w3-input w3-light-grey" type="text" placeholder="Main Number">
+						</div>
+						<div class="w3-panel">
+							<input class="w3-input w3-light-grey" type="text" placeholder="Your Email">
+						</div>
+						<div class="w3-panel">
+							<input class="w3-input w3-light-grey" type="text" placeholder="Your Linkedin Link">
+						</div>
+					</div>
+				</div>
+				<div class="w3-panel w3-center">
+					<div class="w3-tooltip w3-half w3-padding-16">
+						<button class="w3-button w3-teal w3-padding-16 w3-right w3-margin-right" style="width:50%">Preview Profile</button>
+						<p class="w3-text">View how your profile will look to others, without making it live.</p>
+					</div>
+					<div class="w3-tooltip w3-half w3-left w3-padding-16">
+						<button class="w3-button w3-teal w3-padding-16 w3-left w3-margin-left" style="width:50%">Save Profile</button>
+						<p class="w3-text">This will save your changes on profile edit, but not make them public.</p>
+					</div>
+				</div>
+				</div>
+			</div>
+			
+		</div>
+		<div class="w3-container w3-hide-small w3-cell w3-col m2 l2">
+		</div>
+	</div>
+	
+	<div id="cultureSurvey" class="section" style="display:none">
+		<div class="w3-container w3-cell-row">
+			<div class="w3-cell w3-panel w3-hide-small w3-col m2 l2">
+			</div>
+			<div class="w3-cell w3-panel w3-row w3-col s12 m8 l8">
+				<div class="w3-border-bottom">
+					<h1 class="w3-center">Culture Survey</h1>
+					<p> ​Culture can be define as those things that are valued and rewarded at your company - that is, the pattern of beliefs and expectations shared by members, and their resulting behaviour.</p>
+					<p>Please sort 54 values into a row of 9 categories (drag & drop items), placing at one end of the row items that you consider to be the most characteristic aspects of the culture of you organisation, and at the other end cards that you consider to be the least characteristic. </p>
+					<p><b>1 = Least Characteristic, 9 = Most Characteristic.
+						The order within a group is not relevant</b></p>
+	 
+					<p><b>Required distribution of items at 1-9 level: 2-4-6-9-12-9-6-4-2:</b></p>
+				</div>
+			</div>
+			<div class="w3-cell w3-panel w3-hide-small w3-col m2 l2">
+			</div>
+		</div>
+		<div class="w3-container">
+			<div class="w3-panel w3-white w3-border w3-round-xlarge">
+				<div class="w3-cell-row">
+					<div id="drag1" class="w3-panel w3-cell" draggable="true" style="width:10%" ondragstart="drag(event)">
+						<p>Achievement Oriented</b>
+					</div>
+					<div id="drag2" class="w3-panel w3-cell" draggable="true" style="width:10%" ondragstart="drag(event)">
+						<p>Action Oriented</b>
+					</div>
+					<div id="drag3" class="w3-panel w3-cell" draggable="true" style="width:10%" ondragstart="drag(event)">
+						<p>Avoiding Conflict</b>
+					</div>
+					<div id="drag4" class="w3-panel w3-cell" draggable="true" style="width:10%" ondragstart="drag(event)">
+						<p>Being Aggressive</b>
+					</div>
+					<div id="drag5" class="w3-panel w3-cell" draggable="true" style="width:10%" ondragstart="drag(event)">
+						<p>Being Analytical</b>
+					</div>
+					<div id="drag6" class="w3-panel w3-cell" draggable="true" style="width:10%" ondragstart="drag(event)">
+						<p>Being Calm</b>
+					</div>
+					<div id="drag7" class="w3-panel w3-cell" draggable="true" style="width:10%" ondragstart="drag(event)">
+						<p>Being Careful</b>
+					</div>
+					<div id="drag8" class="w3-panel w3-cell" draggable="true" style="width:10%" ondragstart="drag(event)">
+						<p>Being Competitive</b>
+					</div>
+					<div id="drag9" class="w3-panel w3-cell" draggable="true" style="width:10%" ondragstart="drag(event)">
+						<p>Being Decisive</b>
+					</div>
+					<div id="drag10" class="w3-panel w3-cell" draggable="true" style="width:10%" ondragstart="drag(event)">
+						<p>Being Easygoing</b>
+					</div>
+				</div>
+				<div class="w3-cell-row">
+					<div id="drag11" class="w3-panel w3-cell" draggable="true" style="width:10%" ondragstart="drag(event)">
+						<p>Being Fair</b>
+					</div>
+					<div id="drag12" class="w3-panel w3-cell" draggable="true" style="width:10%" ondragstart="drag(event)">
+						<p>Being Honest</b>
+					</div>
+					<div id="drag13" class="w3-panel w3-cell" draggable="true" style="width:10%" ondragstart="drag(event)">
+						<p>Being Innovative</b>
+					</div>
+					<div id="drag14" class="w3-panel w3-cell" draggable="true" style="width:10%" ondragstart="drag(event)">
+						<p>Being Market Oriented</b>
+					</div>
+					<div id="drag15" class="w3-panel w3-cell" draggable="true" style="width:10%" ondragstart="drag(event)">
+						<p>Being Percise</b>
+					</div>
+					<div id="drag16" class="w3-panel w3-cell" draggable="true" style="width:10%" ondragstart="drag(event)">
+						<p>Being Quick to Take Advantage of Opportunities</b>
+					</div>
+					<div id="drag17" class="w3-panel w3-cell" draggable="true" style="width:10%" ondragstart="drag(event)">
+						<p>Emphasis on Professional Growth</b>
+					</div>
+					<div id="drag18" class="w3-panel w3-cell" draggable="true" style="width:10%" ondragstart="drag(event)">
+						<p>Having High Expectations for Performance</b>
+					</div>
+					<div id="drag19" class="w3-panel w3-cell" draggable="true" style="width:10%" ondragstart="drag(event)">
+						<p>Having Integrity</b>
+					</div>
+					<div id="drag20" class="w3-panel w3-cell" draggable="true" style="width:10%" ondragstart="drag(event)">
+						<p>Learning from Mistakes</b>
+					</div>
+				</div>
+				<div class="w3-cell-row">
+					<div id="drag21" class="w3-panel w3-cell" draggable="true" style="width:10%" ondragstart="drag(event)">
+						<p>Listening to Customers</b>
+					</div>
+					<div id="drag22" class="w3-panel w3-cell" draggable="true" style="width:10%" ondragstart="drag(event)">
+						<p>Being Reflective</b>
+					</div>
+					<div id="drag23" class="w3-panel w3-cell" draggable="true" style="width:10%" ondragstart="drag(event)">
+						<p>Individual Goals are Transparent</b>
+					</div>
+					<div id="drag24" class="w3-panel w3-cell" draggable="true" style="width:10%" ondragstart="drag(event)">
+						<p>Having High Ethical Standards</b>
+					</div>
+					<div id="drag25" class="w3-panel w3-cell" draggable="true" style="width:10%" ondragstart="drag(event)">
+						<p>Emphasising Quality</b>
+					</div>
+					<div id="drag26" class="w3-panel w3-cell" draggable="true" style="width:10%" ondragstart="drag(event)">
+						<p>Confronting Conflict Directly</b>
+					</div>
+					<div id="drag27" class="w3-panel w3-cell" draggable="true" style="width:10%" ondragstart="drag(event)">
+						<p>Being Willing to Experiment</b>
+					</div>
+					<div id="drag28" class="w3-panel w3-cell" draggable="true" style="width:10%" ondragstart="drag(event)">
+						<p>Being Team Oriented</b>
+					</div>
+					<div id="drag29" class="w3-panel w3-cell" draggable="true" style="width:10%" ondragstart="drag(event)">
+						<p>Hard-Driving</b>
+					</div>
+					<div id="drag30" class="w3-panel w3-cell" draggable="true" style="width:10%" ondragstart="drag(event)">
+						<p>Being Results Oriented</b>
+					</div>
+				</div>
+				<div class="w3-cell-row">
+					<div id="drag31" class="w3-panel w3-cell" draggable="true" style="width:10%" ondragstart="drag(event)">
+						<p>High Levels of Conflict</b>
+					</div>
+					<div id="drag32" class="w3-panel w3-cell" draggable="true" style="width:10%" ondragstart="drag(event)">
+						<p>Being Rule Oriented</b>
+					</div>
+					<div id="drag33" class="w3-panel w3-cell" draggable="true" style="width:10%" ondragstart="drag(event)">
+						<p>Being Supportive</b>
+					</div>
+					<div id="drag34" class="w3-panel w3-cell" draggable="true" style="width:10%" ondragstart="drag(event)">
+						<p>Fast Moving</b>
+					</div>
+					<div id="drag35" class="w3-panel w3-cell" draggable="true" style="width:10%" ondragstart="drag(event)">
+						<p>Being Tolerant</b>
+					</div>
+					<div id="drag36" class="w3-panel w3-cell" draggable="true" style="width:10%" ondragstart="drag(event)">
+						<p>Cooperative</b>
+					</div>
+					<div id="drag37" class="w3-panel w3-cell" draggable="true" style="width:10%" ondragstart="drag(event)">
+						<p>Making Your Numbers</b>
+					</div>
+					<div id="drag38" class="w3-panel w3-cell" draggable="true" style="width:10%" ondragstart="drag(event)">
+						<p>Not Being Constrained by Many Rules</b>
+					</div>
+					<div id="drag39" class="w3-panel w3-cell" draggable="true" style="width:10%" ondragstart="drag(event)">
+						<p>Paying Attention to Detail</b>
+					</div>
+					<div id="drag40" class="w3-panel w3-cell" draggable="true" style="width:10%" ondragstart="drag(event)">
+						<p>Predictability</b>
+					</div>
+				</div>
+				<div class="w3-cell-row">
+					<div id="drag41" class="w3-panel w3-cell" draggable="true" style="width:10%" ondragstart="drag(event)">
+						<p>Putting Organisation's Goals Before Unit's Goals</b>
+					</div>
+					<div id="drag42" class="w3-panel w3-cell" draggable="true" style="width:10%" ondragstart="drag(event)">
+						<p>Respecting Individuals</b>
+					</div>
+					<div id="drag43" class="w3-panel w3-cell" draggable="true" style="width:10%" ondragstart="drag(event)">
+						<p>Risk-taking</b>
+					</div>
+					<div id="drag44" class="w3-panel w3-cell" draggable="true" style="width:10%" ondragstart="drag(event)">
+						<p>Security of Employment</b>
+					</div>
+					<div id="drag45" class="w3-panel w3-cell" draggable="true" style="width:10%" ondragstart="drag(event)">
+						<p>Stability</b>
+					</div>
+					<div id="drag46" class="w3-panel w3-cell" draggable="true" style="width:10%" ondragstart="drag(event)">
+						<p>Taking Individual Responsibility</b>
+					</div>
+					<div id="drag47" class="w3-panel w3-cell" draggable="true" style="width:10%" ondragstart="drag(event)">
+						<p>Taking Initiative</b>
+					</div>
+					<div id="drag48" class="w3-panel w3-cell" draggable="true" style="width:10%" ondragstart="drag(event)">
+						<p>Urgency</b>
+					</div>
+					<div id="drag49" class="w3-panel w3-cell" draggable="true" style="width:10%" ondragstart="drag(event)">
+						<p>What You Know Matters More Than Who You Know</b>
+					</div>
+					<div id="drag50" class="w3-panel w3-cell" draggable="true" style="width:10%" ondragstart="drag(event)">
+						<p>Working in Collaboration with Others</b>
+					</div>
+				</div>
+				<div class="w3-cell-row">
+					<div id="drag51" class="w3-panel w3-cell" draggable="true" style="width:10%" ondragstart="drag(event)">
+						<p>Being People Oriented</b>
+					</div>
+					<div id="drag51" class="w3-panel w3-cell" draggable="true" style="width:10%" ondragstart="drag(event)">
+						<p>Adaptability</b>
+					</div>
+					<div id="drag51" class="w3-panel w3-cell" draggable="true" style="width:10%" ondragstart="drag(event)">
+						<p>Being Customer Oriented</b>
+					</div>
+					<div id="drag51" class="w3-panel w3-cell" draggable="true" style="width:10%" ondragstart="drag(event)">
+						<p>Sharing Information Freely</b>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="w3-container w3-row">
+			<div class="w3-panel w3-quarter">
+				<div class="w3-card-2 w3-panel w3-round-xlarge">
+					
+					<div class="w3-container w3-border-bottom">
+						<h3 class="w3-center">1: Least Important</h3>
+					</div>
+					<div id="panel1" class="w3-container" ondrop="drop(event)" ondragover="allowDrop(event)" style="height:200px; overflow:scroll;">
+						
+					</div>
+				</div>
+			</div>
+			<div class="w3-panel w3-quarter">
+				<div class="w3-card-2 w3-panel w3-round-xlarge">
+					
+					<div class="w3-container w3-border-bottom">
+						<h2 class="w3-center">2</h2>
+					</div>
+					<div id="panel2" class="w3-container" ondrop="drop(event)" ondragover="allowDrop(event)" style="height:200px; overflow:scroll;">
+						
+					</div>
+				</div>
+			</div>
+			<div class="w3-panel w3-quarter">
+				<div class="w3-card-2 w3-panel w3-round-xlarge">
+					
+					<div class="w3-container w3-border-bottom">
+						<h2 class="w3-center">3</h2>
+					</div>
+					<div id="panel3" class="w3-container" ondrop="drop(event)" ondragover="allowDrop(event)" style="height:200px; overflow:scroll;">
+						
+					</div>
+				</div>
+			</div>
+			<div class="w3-panel w3-quarter">
+				<div class="w3-card-2 w3-panel w3-round-xlarge">
+					
+					<div class="w3-container w3-border-bottom">
+						<h2 class="w3-center">4</h2>
+					</div>
+					<div id="panel4" class="w3-container" ondrop="drop(event)" ondragover="allowDrop(event)" style="height:200px; overflow:scroll;">
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="w3-container w3-cell-row">
+			<div class="w3-panel w3-cell ed-fifth">
+				<div class="w3-card-2 w3-panel w3-round-xlarge">
+					
+					<div class="w3-container w3-border-bottom" style="height:60px">
+						<h2 class="w3-center">5</h2>
+					</div>
+					<div id="panel5" class="w3-container" ondrop="drop(event)" ondragover="allowDrop(event)" style="height:200px; overflow:scroll;">
+						
+					</div>
+				</div>
+			</div>
+			<div class="w3-panel w3-cell ed-fifth">
+				<div class="w3-card-2 w3-panel w3-round-xlarge">
+					
+					<div class="w3-container w3-border-bottom" style="height:60px">
+						<h2 class="w3-center">6</h2>
+					</div>
+					<div id="panel6" class="w3-container" ondrop="drop(event)" ondragover="allowDrop(event)" style="height:200px; overflow:scroll;">
+						
+					</div>
+				</div>
+			</div>
+			<div class="w3-panel w3-cell ed-fifth">
+				<div class="w3-card-2 w3-panel w3-round-xlarge">
+					
+					<div class="w3-container w3-border-bottom" style="height:60px">
+						<h2 class="w3-center">7</h2>
+					</div>
+					<div id="panel7" class="w3-container" ondrop="drop(event)" ondragover="allowDrop(event)" style="height:200px; overflow:scroll;">
+						
+					</div>
+				</div>
+			</div>
+			<div class="w3-panel w3-cell ed-fifth">
+				<div class="w3-card-2 w3-panel w3-round-xlarge">
+					
+					<div class="w3-container w3-border-bottom" style="height:60px">
+						<h2 class="w3-center">8</h2>
+					</div>
+					<div id="panel8" class="w3-container" ondrop="drop(event)" ondragover="allowDrop(event)" style="height:200px; overflow:scroll;">
+						
+					</div>
+				</div>
+			</div>
+			<div class="w3-panel w3-cell ed-fifth">
+				<div class="w3-card-2 w3-panel w3-round-xlarge">
+					
+					<div class="w3-container w3-border-bottom" style="height:60px">
+						<h4 class="w3-center">9: Most Important</h4>
+					</div>
+					<div id="panel9" class="w3-container" ondrop="drop(event)" ondragover="allowDrop(event)" style="height:200px; overflow:scroll;">
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="submit" class="section" style="display:none">
+		<div class="w3-container w3-cell-row">
+			<div class="w3-cell w3-panel w3-hide-small w3-col m2 l2">
+			</div>
+			<div class="w3-cell w3-panel w3-row w3-col s12 m8 l8">
+				<div class="w3-border-bottom">
+					<h1 class="w3-center">Submission</h1>
+					<p>Please check details have been entered accurately as some of these these cannot be changed later.</p>
+				</div>
+				<div class="w3-panel w3-center">
+					<button class=" w3-button w3-teal w3-padding-16">Upload Profile</button>
+					<button class=" w3-button w3-grey w3-padding-16">Save Profile</button>
+					<button class=" w3-button w3-grey w3-padding-16">Preview Profile</button>
+				</div>
+			</div>
+			<div class="w3-cell w3-panel w3-hide-small w3-col m2 l2">
+			</div>
+		</div>
+	</div>
+	
+	<script>
+		var slideIndex = 1;
+		showDivs(slideIndex);
+
+		function plusDivs(n) {
+		  showDivs(slideIndex += n);
+		}
+
+		function showDivs(n) {
+		  var i;
+		  var x = document.getElementsByClassName("mySlides");
+		  if (n > x.length) {slideIndex = 1}    
+		  if (n < 1) {slideIndex = x.length}
+		  for (i = 0; i < x.length; i++) {
+			 x[i].style.display = "none";  
+		  }
+		  x[slideIndex-1].style.display = "block";  
+		}
+	</script>
+</body>

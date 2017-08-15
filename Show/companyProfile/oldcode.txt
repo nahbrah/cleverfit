@@ -1,0 +1,74 @@
+BENIFIT PANELS
+<div class="w3-panel w3-white w3-hover-opacity w3-col s12 m2 l2">
+				<div class="w3-panel w3-grey">
+					<img src="benifit1.jpg" class="w3-margin-top" alt="" style="width:100%">
+					<h5>Benifit 1</h5>
+				</div>
+			</div>
+			<div class="w3-panel w3-white w3-hover-opacity w3-col s12 m2 l2">
+				<div class="w3-panel w3-grey">
+					<img src="benifit2.jpg" class="w3-margin-top" alt="" style="width:100%">
+					<h5>Benifit 2</h5>
+				</div>
+			</div>
+			<div class="w3-panel w3-white w3-hover-opacity w3-col s12 m2 l2">
+				<div class="w3-panel w3-grey">
+					<img src="benifit3.jpg" class="w3-margin-top" alt="" style="width:100%">
+					<h5>Benifit 3</h5>
+				</div>
+			</div>
+			<div class="w3-panel w3-white w3-hover-opacity w3-col s12 m2 l2">
+				<div class="w3-panel w3-grey">
+					<img src="benifit4.jpg" class="w3-margin-top" alt="" style="width:100%">
+					<h5>Benifit 4</h5>
+				</div>
+			</div>
+			<div class="w3-panel w3-white w3-hover-opacity w3-col s12 m2 l2">
+				<div class="w3-panel w3-grey">
+					<img src="benifit5.jpg" class="w3-margin-top" alt="" style="width:100%">
+					<h5>Benifit 5</h5>
+				</div>
+			</div>
+			<div class="w3-panel w3-white w3-hover-opacity w3-col s12 m2 l2">
+				<div class="w3-panel w3-grey">
+					<img src="benifit6.jpg" class="w3-margin-top" alt="" style="width:100%">
+					<h5>Benifit 6</h5>
+				</div>
+			</div>
+			
+CULTURETABS
+			<div class="w3-container">
+			<div class="w3-bar w3-black w3-mobile">
+			  <button class="w3-bar-item w3-button" onclick="openTab('Culture1')">Culture 1</button>
+			  <button class="w3-bar-item w3-button" onclick="openTab('Culture2')">Culture 2</button>
+			  <button class="w3-bar-item w3-button" onclick="openTab('Culture3')">Culture 3</button>
+			</div>
+			
+			<div id="Culture1" class="ed-image w3-container w3-grey w3-mobile culture">
+			  <h2>Culture 1</h2>
+			  <img src="Office.jpg" alt="Office" style="width:100%">
+			  <p>Culture 1 goes here.</p>
+			</div>
+
+			<div id="Culture2" class="ed-image w3-container w3-grey w3-mobile culture" style="display:none">
+			  <h2>Culture 2</h2>
+			  <img src="ProductionLine.jpg" alt="Production Line" style="width:100%">
+			  <p>Culture 2 goes here.</p>
+			</div>
+
+			<div id="Culture3" class="w3-container w3-grey w3-mobile culture" style="display:none">
+				<h2>Culture 3</h2>
+				<p>Culture 3 goes here.</p>
+			</div>
+			
+			<script>
+			function openTab(TabName) {
+				var i;
+				var x = document.getElementsByClassName("culture");
+				for (i = 0; i < x.length; i++) {
+					x[i].style.display = "none";
+				}
+				document.getElementById(TabName).style.display = "block";
+			}
+			</script>
+		</div>
