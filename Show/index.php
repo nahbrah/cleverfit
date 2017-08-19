@@ -1,5 +1,5 @@
 
 <?php 
-	header("Location: /var/www/html/Show/homePage/index.html");
+	header("Location: http://46.101.78.133/homePage/index.html");
 	exit();
 ?>
